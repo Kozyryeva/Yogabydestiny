@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eating with the seasons: an Ayurvedic guide to winter foods · Yoga by Destiny</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black:#080808; --surface:#121212; --card:#1a1a14;
+      --gold:#C9A84C; --gold-light:#E8D5A3; --gold-dim:#8a6f2e;
+      --text:#d4c8a8; --text-muted:#7a7060; --white:#f5f0e8;
+    }
+    html { scroll-behavior: smooth; }
+    body { background:var(--black); color:var(--text); font-family:'Lato',sans-serif; font-weight:300; line-height:1.75; overflow-x:hidden; }
+    nav { position:fixed; top:0; left:0; right:0; z-index:1000; display:flex; justify-content:space-between; align-items:center; padding:1rem 4vw; background:rgba(8,8,8,.97); border-bottom:1px solid rgba(201,168,76,.12); backdrop-filter:blur(8px); }
+    .nav-logo { font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; letter-spacing:.14em; color:var(--gold); text-transform:uppercase; text-decoration:none; white-space:nowrap; flex-shrink:0; }
+    nav ul { list-style:none; display:flex; align-items:center; gap:0; flex-wrap:nowrap; margin:0; padding:0; }
+    nav ul li { display:block; }
+    nav ul li a { display:block; padding:.5rem .9rem; font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; color:var(--text-muted); text-decoration:none; white-space:nowrap; transition:color .3s; }
+    nav ul li a:hover, nav ul li a.active { color:var(--gold); }
+    .nav-toggle { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:.4rem; }
+    .nav-toggle span { display:block; width:22px; height:1px; background:var(--gold); }
+    @media(max-width:720px){ .nav-toggle{display:flex;} nav ul{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:rgba(8,8,8,.98);border-bottom:1px solid rgba(201,168,76,.15);padding:.75rem 0 1rem;} nav ul.open{display:flex;} nav ul li a{padding:.7rem 4vw;font-size:.8rem;} }
+    .breadcrumb { padding:6.5rem 5vw 0; max-width:780px; margin:0 auto; }
+    .breadcrumb a { font-size:.7rem; letter-spacing:.18em; text-transform:uppercase; color:var(--text-muted); text-decoration:none; display:inline-flex; align-items:center; gap:.45rem; transition:color .3s; }
+    .breadcrumb a::before { content:'←'; }
+    .breadcrumb a:hover { color:var(--gold); }
+    .post-header { max-width:780px; margin:0 auto; padding:2.5rem 5vw 0; text-align:center; }
+    .post-tag { display:inline-block; font-size:.62rem; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); border:1px solid var(--gold-dim); padding:.25rem .75rem; margin-bottom:1.5rem; }
+    .post-title { font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,5vw,3.4rem); font-weight:300; color:var(--white); line-height:1.15; margin-bottom:1.5rem; }
+    .post-title em { font-style:italic; color:var(--gold-light); }
+    .post-meta { display:flex; align-items:center; justify-content:center; gap:.85rem; flex-wrap:wrap; font-size:.72rem; color:var(--text-muted); letter-spacing:.06em; margin-bottom:2.5rem; }
+    .post-meta-dot { width:3px; height:3px; border-radius:50%; background:var(--gold-dim); }
+    .gold-line { display:block; height:1px; background:linear-gradient(90deg,transparent,var(--gold),transparent); max-width:340px; margin:0 auto 3.5rem; }
+    .post-illustration { max-width:900px; margin:0 auto; padding:0 5vw 3.5rem; display:flex; justify-content:center; }
+    .post-illustration svg { width:min(300px,70vw); height:min(300px,70vw); opacity:.75; }
+    .post-body { max-width:700px; margin:0 auto; padding:0 5vw 5rem; }
+    .post-body p { font-size:1.05rem; line-height:1.9; color:var(--text); margin-bottom:1.6rem; }
+    .post-body h2 { font-family:'Cormorant Garamond',serif; font-size:clamp(1.5rem,3vw,2rem); font-weight:300; color:var(--white); line-height:1.2; margin:3rem 0 1rem; }
+    .post-body h2 em { font-style:italic; color:var(--gold-light); }
+    .post-body h3 { font-family:'Cormorant Garamond',serif; font-size:1.25rem; color:var(--gold-light); font-weight:400; margin:2rem 0 .75rem; }
+    .post-body strong { color:var(--white); font-weight:400; }
+    .pull-quote { border-left:1px solid var(--gold); padding:1.25rem 1.75rem; margin:2.5rem 0; background:rgba(201,168,76,.04); }
+    .pull-quote p { font-family:'Cormorant Garamond',serif; font-size:1.35rem; font-style:italic; color:var(--gold-light); line-height:1.55; margin-bottom:0; }
+    .tip-box { border:1px solid rgba(201,168,76,.2); background:var(--card); padding:1.5rem 1.75rem; margin:2.5rem 0; }
+    .tip-box-label { font-size:.62rem; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); margin-bottom:.75rem; display:block; }
+    .tip-box ul { list-style:none; padding:0; margin-top:.5rem; }
+    .tip-box ul li { font-size:.95rem; color:var(--text); padding:.3rem 0 .3rem 1.2rem; position:relative; }
+    .tip-box ul li::before { content:'—'; position:absolute; left:0; color:var(--gold-dim); }
+    .section-divider { display:flex; align-items:center; gap:1rem; margin:3rem 0; }
+    .section-divider::before,.section-divider::after { content:''; flex:1; height:1px; background:linear-gradient(90deg,transparent,rgba(201,168,76,.3)); }
+    .section-divider::after { background:linear-gradient(270deg,transparent,rgba(201,168,76,.3)); }
+    .section-divider span { color:var(--gold); font-size:.9rem; flex-shrink:0; }
+    .author-bio { max-width:700px; margin:0 auto 3rem; padding:0 5vw; }
+    .author-bio-inner { display:flex; gap:1.5rem; align-items:flex-start; border:1px solid rgba(201,168,76,.15); background:var(--card); padding:1.75rem; }
+    .author-avatar-lg { width:56px; height:56px; border-radius:50%; border:1px solid var(--gold-dim); display:flex; align-items:center; justify-content:center; font-family:'Cormorant Garamond',serif; font-size:1.4rem; color:var(--gold); flex-shrink:0; }
+    .author-bio-text { flex:1; }
+    .author-bio-name { font-family:'Cormorant Garamond',serif; font-size:1.1rem; color:var(--white); margin-bottom:.25rem; }
+    .author-bio-role { font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; color:var(--gold-dim); margin-bottom:.6rem; }
+    .author-bio-text p { font-size:.88rem; color:var(--text-muted); margin-bottom:0; }
+    .related { background:var(--surface); border-top:1px solid rgba(201,168,76,.1); padding:4rem 5vw; }
+    .related-inner { max-width:1100px; margin:0 auto; }
+    .related-label { font-size:.68rem; letter-spacing:.3em; text-transform:uppercase; color:var(--gold-dim); margin-bottom:.75rem; text-align:center; }
+    .related-title { font-family:'Cormorant Garamond',serif; font-size:clamp(1.6rem,3vw,2.2rem); font-weight:300; color:var(--white); text-align:center; margin-bottom:2.5rem; }
+    .related-title em { font-style:italic; color:var(--gold-light); }
+    .related-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; }
+    .related-card { background:var(--card); border:1px solid rgba(201,168,76,.1); padding:1.6rem; text-decoration:none; display:block; transition:border-color .35s,transform .35s; position:relative; overflow:hidden; }
+    .related-card::before { content:''; position:absolute; top:0; left:0; right:0; height:1px; background:linear-gradient(90deg,transparent,var(--gold),transparent); transform:scaleX(0); transform-origin:center; transition:transform .45s; }
+    .related-card:hover { border-color:rgba(201,168,76,.3); transform:translateY(-3px); }
+    .related-card:hover::before { transform:scaleX(1); }
+    .related-card-tag { font-size:.6rem; letter-spacing:.18em; text-transform:uppercase; color:var(--gold-dim); margin-bottom:.6rem; display:block; }
+    .related-card-title { font-family:'Cormorant Garamond',serif; font-size:1.1rem; color:var(--white); line-height:1.3; font-weight:300; margin-bottom:.5rem; }
+    .related-card-arrow { font-size:.68rem; letter-spacing:.15em; text-transform:uppercase; color:var(--gold); display:block; margin-top:1rem; }
+    .post-cta { background:var(--black); text-align:center; padding:5rem 5vw; position:relative; overflow:hidden; }
+    .post-cta::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 50% 60% at 50% 50%,rgba(201,168,76,.06) 0%,transparent 70%); }
+    .post-cta-inner { position:relative; z-index:1; max-width:540px; margin:0 auto; }
+    .post-cta-label { font-size:.68rem; letter-spacing:.3em; text-transform:uppercase; color:var(--gold-dim); margin-bottom:1rem; }
+    .post-cta-title { font-family:'Cormorant Garamond',serif; font-size:clamp(1.8rem,3.5vw,2.6rem); font-weight:300; color:var(--white); line-height:1.15; margin-bottom:1rem; }
+    .post-cta-title em { font-style:italic; color:var(--gold-light); }
+    .post-cta p { color:var(--text-muted); margin-bottom:2rem; }
+    .btn-primary { display:inline-block; padding:.85rem 2.6rem; border:1px solid var(--gold); color:var(--gold); font-family:'Lato',sans-serif; font-size:.78rem; letter-spacing:.2em; text-transform:uppercase; text-decoration:none; background:transparent; transition:background .35s,color .35s,box-shadow .35s; cursor:pointer; }
+    .btn-primary:hover { background:var(--gold); color:var(--black); box-shadow:0 0 40px rgba(201,168,76,.25); }
+    footer { background:var(--surface); border-top:1px solid rgba(201,168,76,.12); padding:2.5rem 5vw; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1.5rem; }
+    .footer-logo { font-family:'Cormorant Garamond',serif; font-size:1rem; letter-spacing:.18em; color:var(--gold); text-transform:uppercase; }
+    .footer-links { display:flex; gap:2rem; flex-wrap:wrap; }
+    .footer-links a { font-size:.75rem; letter-spacing:.1em; color:var(--text-muted); text-decoration:none; transition:color .3s; }
+    .footer-links a:hover, .footer-links a.active { color:var(--gold); }
+    .footer-social { display:flex; gap:1.25rem; }
+    .footer-social a { display:flex; align-items:center; justify-content:center; width:34px; height:34px; border:1px solid rgba(201,168,76,.25); border-radius:50%; color:var(--text-muted); transition:color .3s,border-color .3s; }
+    .footer-social a:hover { color:var(--gold); border-color:var(--gold); }
+    .footer-social svg { width:15px; height:15px; stroke:currentColor; fill:none; stroke-width:1.6; }
+    .footer-copy { font-size:.72rem; color:var(--text-muted); width:100%; text-align:center; padding-top:.5rem; }
+    .reveal { opacity:0; transform:translateY(22px); transition:opacity .8s ease,transform .8s ease; }
+    .reveal.visible { opacity:1; transform:none; }
+    @media(max-width:800px){ .related-grid{grid-template-columns:1fr;} .author-bio-inner{flex-direction:column;} footer{justify-content:center;text-align:center;} .footer-links{justify-content:center;} }
+    @media(min-width:501px) and (max-width:800px){ .related-grid{grid-template-columns:1fr 1fr;} }
+    @media(prefers-reduced-motion:reduce){ .reveal{opacity:1;transform:none;transition:none;} }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">Yoga by Destiny</a>
+  <button class="nav-toggle" aria-label="Toggle menu" onclick="this.nextElementSibling.classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul id="nav-menu">
+    <li><a href="index.html#about" onclick="document.getElementById('nav-menu').classList.remove('open')">About</a></li>
+    <li><a href="index.html#styles" onclick="document.getElementById('nav-menu').classList.remove('open')">Styles</a></li>
+    <li><a href="index.html#benefits" onclick="document.getElementById('nav-menu').classList.remove('open')">Benefits</a></li>
+    <li><a href="index.html#testimonials" onclick="document.getElementById('nav-menu').classList.remove('open')">Stories</a></li>
+    <li><a href="blog.html" class="active" onclick="document.getElementById('nav-menu').classList.remove('open')">Blog</a></li>
+    <li><a href="index.html#cta" onclick="document.getElementById('nav-menu').classList.remove('open')">Begin</a></li>
+  </ul>
+</nav>
+
+<div class="breadcrumb"><a href="blog.html">Back to Blog</a></div>
+
+<header class="post-header reveal">
+  <span class="post-tag">Ayurveda</span>
+  <h1 class="post-title">Eating with the seasons:<br><em>an Ayurvedic guide to winter foods</em></h1>
+  <div class="post-meta">
+    <span>Anastasiya</span><span class="post-meta-dot"></span>
+    <span>January 2025</span><span class="post-meta-dot"></span>
+    <span>8 min read</span><span class="post-meta-dot"></span>
+    <span>Ayurveda · Nutrition</span>
+  </div>
+  <span class="gold-line"></span>
+</header>
+
+<div class="post-illustration reveal">
+  <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#C9A84C">
+    <path d="M40 160 Q57 60 100 40 Q143 60 160 160" stroke-width=".9"/>
+    <path d="M60 160 Q72 90 100 70 Q128 90 140 160" stroke-width=".7"/>
+    <path d="M80 160 Q88 115 100 100 Q112 115 120 160" stroke-width=".6"/>
+    <line x1="100" y1="160" x2="100" y2="40" stroke-width=".4" stroke="rgba(201,168,76,.4)"/>
+    <ellipse cx="100" cy="148" rx="38" ry="8" stroke-width=".5"/>
+    <circle cx="100" cy="40" r="6" fill="#C9A84C" stroke="none"/>
+    <circle cx="100" cy="40" r="10" stroke-width=".6"/>
+  </svg>
+</div>
+
+<article class="post-body reveal">
+
+  <p>In Ayurveda, the ancient Indian system of medicine and living from which yoga philosophy draws deeply, there is a concept that modern nutrition is only beginning to rediscover: <strong>the body is not the same in winter as it is in summer.</strong> Its needs change. Its digestive capacity shifts. And what nourishes it in the heat of July may actively work against it in the cold of January.</p>
+
+  <p>This is not mysticism. It is observation — centuries of careful attention to how human physiology responds to the natural world. And the most immediate place this wisdom applies is the kitchen.</p>
+
+  <div class="pull-quote">
+    <p>"Nature provides exactly what the body needs in each season — the art is in learning to listen to what it is offering."</p>
+  </div>
+
+  <h2>What Ayurveda says about <em>winter</em></h2>
+
+  <p>In Ayurvedic terms, winter is governed primarily by Vata dosha — the energy of air and space — and the colder, wetter end of winter shifts into Kapha, the energy of earth and water. Both bring a tendency toward cold, dryness, stiffness, and a slowing of digestive fire (what Ayurveda calls <em>agni</em>).</p>
+
+  <p>The prescription for winter eating, therefore, is to counterbalance these qualities: favour warmth, moisture, heaviness, and spice. The goal is to protect and kindle the digestive fire rather than cool or scatter it.</p>
+
+  <h2>Foods that support you in winter</h2>
+
+  <h3>Warm, cooked, and nourishing</h3>
+  <p>This is the single most important principle. Winter is not the season for cold salads, raw foods, smoothies, or ice in drinks. These cool and dampen agni at precisely the time it needs stoking. Instead, favour soups, stews, kitchari (a simple Ayurvedic staple of rice and lentils), roasted root vegetables, and warm porridges.</p>
+
+  <div class="tip-box">
+    <span class="tip-box-label">Warming winter foods to favour</span>
+    <ul>
+      <li>Root vegetables — sweet potato, carrot, beetroot, parsnip</li>
+      <li>Whole grains — oats, rice, quinoa (warm and well-cooked)</li>
+      <li>Legumes — red lentils, mung beans, chickpeas</li>
+      <li>Good fats — ghee, sesame oil, coconut oil</li>
+      <li>Warming spices — ginger, cinnamon, cardamom, turmeric, black pepper</li>
+      <li>Nuts and seeds — almonds (soaked), sesame, sunflower</li>
+    </ul>
+  </div>
+
+  <h3>Spice as medicine</h3>
+  <p>Ayurvedic cooking is not merely flavoured with spices — it is <em>structured</em> around them. In winter, warming spices are essential rather than decorative. Fresh ginger added to hot water each morning gently wakes the digestive system. Turmeric in cooked dishes supports circulation and reduces inflammation. Cinnamon in porridge stabilises blood sugar and adds warmth. These are not supplements — they are food, used with intention.</p>
+
+  <h3>Oils and fats</h3>
+  <p>Winter is the season for fat — good fat, used generously. Ghee (clarified butter) is considered one of the most sattvic, or harmonious, foods in Ayurveda; a teaspoon stirred into warm rice or vegetables adds richness, supports digestion, and lubricates the body's tissues, which tend toward dryness in cold, windy months. Sesame oil is similarly warming and can be used in cooking or as a daily self-massage (abhyanga) oil.</p>
+
+  <div class="section-divider"><span>✦</span></div>
+
+  <h2>Common winter health trends that <em>can backfire</em></h2>
+
+  <p>Many popular wellness habits are summer practices mistakenly continued year-round. From an Ayurvedic lens, several deserve a second look in winter.</p>
+
+  <p><strong>Green smoothies.</strong> Raw, cold, and often blended with ice — the exact opposite of what winter digestion needs. If you love your morning smoothie, consider a warm golden milk or spiced oat porridge as a seasonal alternative, and return to smoothies when the warmth comes back.</p>
+
+  <p><strong>Intermittent fasting.</strong> Skipping meals in winter, when the body is already working hard to maintain warmth and immunity, can deplete digestive fire further and aggravate Vata. Ayurveda generally recommends three warm meals at regular intervals in the colder months, with the largest meal at midday when agni is naturally strongest.</p>
+
+  <p><strong>Raw salads as the main meal.</strong> Nutritionally sound in theory, but energetically cold and heavy to digest in winter. Lightly steaming or roasting vegetables transforms them into something the winter body can actually absorb.</p>
+
+  <div class="pull-quote">
+    <p>"Eating in season is not a trend. It is the oldest nutritional wisdom we have — and it is freely available to everyone."</p>
+  </div>
+
+  <h2>A simple place to begin</h2>
+
+  <p>You don't need to overhaul your diet to experience the difference seasonal eating makes. Start with one small shift: replace your morning cold drink with something warm. Warm water with a slice of fresh ginger and a squeeze of lemon. Herbal tea. Warm oat milk with a pinch of cinnamon and cardamom. Do this for one week and notice — genuinely notice — whether your energy, digestion, and sense of groundedness feel different.</p>
+
+  <p>The seasons are not something that happen to us. They are something we can choose to move with. And winter, for all its darkness and cold, offers something summer cannot: an invitation to slow down, turn inward, and nourish deeply.</p>
+
+  <p>That is not a limitation. In Ayurveda, it is a gift.</p>
+
+</article>
+
+<div class="author-bio reveal">
+  <div class="author-bio-inner">
+    <div class="author-avatar-lg">A</div>
+    <div class="author-bio-text">
+      <p class="author-bio-name">Anastasiya</p>
+      <p class="author-bio-role">Certified Yoga Teacher · Ayurveda & Meditation Guide</p>
+      <p>Anastasiya has been teaching yoga for over a decade, guiding students across all ages and backgrounds through online and in-person sessions rooted in classical tradition and genuine care.</p>
+    </div>
+  </div>
+</div>
+
+<section class="related reveal">
+  <div class="related-inner">
+    <p class="related-label">Keep reading</p>
+    <h2 class="related-title">More from <em>the mat</em></h2>
+    <div class="related-grid">
+      <a href="post-dosha-digestion.html" class="related-card">
+        <span class="related-card-tag">Ayurveda</span>
+        <p class="related-card-title">What your digestion is telling you about your dosha</p>
+        <span class="related-card-arrow">Read more →</span>
+      </a>
+      <a href="post-evening-ritual.html" class="related-card">
+        <span class="related-card-tag">Lifestyle</span>
+        <p class="related-card-title">The evening ritual that helped me sleep through the night</p>
+        <span class="related-card-arrow">Read more →</span>
+      </a>
+      <a href="post-hatha-beginners.html" class="related-card">
+        <span class="related-card-tag">Yoga</span>
+        <p class="related-card-title">Why beginners struggle with Hatha yoga — and how to change that</p>
+        <span class="related-card-arrow">Read more →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="post-cta reveal">
+  <div class="post-cta-inner">
+    <p class="post-cta-label">Nourish every layer</p>
+    <h2 class="post-cta-title">Explore yoga &amp; Ayurveda<br><em>with personal guidance</em></h2>
+    <p>Bring seasonal wisdom into your movement practice in a live session with Anastasiya — tailored to your constitution, your pace, and exactly where you are today.</p>
+    <a href="index.html#cta" class="btn-primary">Reserve Your First Session</a>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-logo">Yoga by Destiny</span>
+  <nav class="footer-links">
+    <a href="index.html#about">About</a>
+    <a href="index.html#styles">Styles</a>
+    <a href="index.html#benefits">Benefits</a>
+    <a href="blog.html" class="active">Blog</a>
+    <a href="index.html#cta">Book a Session</a>
+  </nav>
+  <div class="footer-social">
+    <a href="https://instagram.com/destiny.of.a.yogi" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg viewBox="0 0 24 24"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r=".6" fill="currentColor" stroke="none"/></svg>
+    </a>
+    <a href="https://facebook.com/YogaWithAnastasiya" target="_blank" rel="noopener" aria-label="Facebook">
+      <svg viewBox="0 0 24 24"><path d="M16 8h-2.5a2 2 0 0 0-2 2v2H9v3h2.5v7h3v-7H17l.5-3h-3v-1.5a.5.5 0 0 1 .5-.5H17z"/><circle cx="12" cy="12" r="10"/></svg>
+    </a>
+  </div>
+  <span class="footer-copy">© 2025 Yoga by Destiny. All rights reserved.</span>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver(entries => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);} }); }, {threshold:.1});
+  reveals.forEach(el => io.observe(el));
+</script>
+</body>
+</html>

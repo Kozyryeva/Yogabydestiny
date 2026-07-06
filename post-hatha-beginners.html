@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why beginners struggle with Hatha yoga — and how to change that · Yoga by Destiny</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black:      #080808;
+      --surface:    #121212;
+      --card:       #1a1a14;
+      --gold:       #C9A84C;
+      --gold-light: #E8D5A3;
+      --gold-dim:   #8a6f2e;
+      --text:       #d4c8a8;
+      --text-muted: #7a7060;
+      --white:      #f5f0e8;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--text);
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      line-height: 1.75;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1rem 4vw;
+      background: rgba(8,8,8,.97);
+      border-bottom: 1px solid rgba(201,168,76,.12);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem; font-weight: 600;
+      letter-spacing: .14em; color: var(--gold);
+      text-transform: uppercase; text-decoration: none;
+      white-space: nowrap; flex-shrink: 0;
+    }
+    nav ul {
+      list-style: none; display: flex; align-items: center;
+      gap: 0; flex-wrap: nowrap; margin: 0; padding: 0;
+    }
+    nav ul li { display: block; }
+    nav ul li a {
+      display: block; padding: .5rem .9rem;
+      font-size: .72rem; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--text-muted);
+      text-decoration: none; white-space: nowrap;
+      transition: color .3s; cursor: pointer;
+    }
+    nav ul li a:hover,
+    nav ul li a.active { color: var(--gold); }
+    .nav-toggle {
+      display: none; flex-direction: column; gap: 5px;
+      background: none; border: none; cursor: pointer; padding: .4rem;
+    }
+    .nav-toggle span { display: block; width: 22px; height: 1px; background: var(--gold); transition: .3s; }
+
+    @media (max-width: 720px) {
+      .nav-toggle { display: flex; }
+      nav ul {
+        display: none; position: absolute;
+        top: 100%; left: 0; right: 0; flex-direction: column;
+        background: rgba(8,8,8,.98);
+        border-bottom: 1px solid rgba(201,168,76,.15);
+        padding: .75rem 0 1rem; gap: 0;
+      }
+      nav ul.open { display: flex; }
+      nav ul li a { padding: .7rem 4vw; font-size: .8rem; }
+    }
+
+    /* ── BACK BREADCRUMB ── */
+    .breadcrumb {
+      padding: 6.5rem 5vw 0;
+      max-width: 780px; margin: 0 auto;
+    }
+    .breadcrumb a {
+      font-size: .7rem; letter-spacing: .18em; text-transform: uppercase;
+      color: var(--text-muted); text-decoration: none;
+      display: inline-flex; align-items: center; gap: .45rem;
+      transition: color .3s;
+    }
+    .breadcrumb a::before { content: '←'; }
+    .breadcrumb a:hover { color: var(--gold); }
+
+    /* ── POST HEADER ── */
+    .post-header {
+      max-width: 780px; margin: 0 auto;
+      padding: 2.5rem 5vw 0;
+      text-align: center;
+    }
+    .post-tag {
+      display: inline-block;
+      font-size: .62rem; letter-spacing: .22em; text-transform: uppercase;
+      color: var(--gold); border: 1px solid var(--gold-dim);
+      padding: .25rem .75rem; margin-bottom: 1.5rem;
+    }
+    .post-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      font-weight: 300; color: var(--white);
+      line-height: 1.15; margin-bottom: 1.5rem;
+    }
+    .post-title em { font-style: italic; color: var(--gold-light); }
+    .post-meta {
+      display: flex; align-items: center; justify-content: center;
+      gap: .85rem; flex-wrap: wrap;
+      font-size: .72rem; color: var(--text-muted); letter-spacing: .06em;
+      margin-bottom: 2.5rem;
+    }
+    .post-meta-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--gold-dim); }
+    .gold-line {
+      display: block; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      max-width: 340px; margin: 0 auto 3.5rem;
+    }
+
+    /* ── POST HERO ILLUSTRATION ── */
+    .post-illustration {
+      max-width: 900px; margin: 0 auto;
+      padding: 0 5vw 3.5rem;
+      display: flex; justify-content: center;
+    }
+    .post-illustration svg {
+      width: min(340px, 70vw); height: min(340px, 70vw);
+      opacity: .75;
+    }
+
+    /* ── ARTICLE BODY ── */
+    .post-body {
+      max-width: 700px; margin: 0 auto;
+      padding: 0 5vw 5rem;
+    }
+
+    /* Typography inside article */
+    .post-body p {
+      font-size: 1.05rem; line-height: 1.9;
+      color: var(--text); margin-bottom: 1.6rem;
+    }
+    .post-body h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 300; color: var(--white);
+      line-height: 1.2; margin: 3rem 0 1rem;
+    }
+    .post-body h2 em { font-style: italic; color: var(--gold-light); }
+    .post-body h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem; color: var(--gold-light);
+      font-weight: 400; margin: 2rem 0 .75rem;
+    }
+    .post-body strong { color: var(--white); font-weight: 400; }
+    .post-body em { color: var(--gold-light); font-style: italic; }
+
+    /* Pull quote */
+    .pull-quote {
+      border-left: 1px solid var(--gold);
+      padding: 1.25rem 1.75rem;
+      margin: 2.5rem 0;
+      background: rgba(201,168,76,.04);
+    }
+    .pull-quote p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem; font-style: italic;
+      color: var(--gold-light); line-height: 1.55;
+      margin-bottom: 0;
+    }
+
+    /* Tip box */
+    .tip-box {
+      border: 1px solid rgba(201,168,76,.2);
+      background: var(--card);
+      padding: 1.5rem 1.75rem;
+      margin: 2.5rem 0;
+    }
+    .tip-box-label {
+      font-size: .62rem; letter-spacing: .22em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: .75rem; display: block;
+    }
+    .tip-box p { font-size: .95rem; margin-bottom: 0; }
+    .tip-box ul {
+      list-style: none; padding: 0; margin-top: .5rem;
+    }
+    .tip-box ul li {
+      font-size: .95rem; color: var(--text);
+      padding: .3rem 0;
+      padding-left: 1.2rem; position: relative;
+    }
+    .tip-box ul li::before {
+      content: '—';
+      position: absolute; left: 0;
+      color: var(--gold-dim);
+    }
+
+    /* Section divider */
+    .section-divider {
+      display: flex; align-items: center; gap: 1rem;
+      margin: 3rem 0;
+    }
+    .section-divider::before,
+    .section-divider::after {
+      content: ''; flex: 1; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(201,168,76,.3));
+    }
+    .section-divider::after {
+      background: linear-gradient(270deg, transparent, rgba(201,168,76,.3));
+    }
+    .section-divider span {
+      color: var(--gold); font-size: .9rem; flex-shrink: 0;
+    }
+
+    /* ── AUTHOR BIO ── */
+    .author-bio {
+      max-width: 700px; margin: 0 auto 3rem;
+      padding: 0 5vw;
+    }
+    .author-bio-inner {
+      display: flex; gap: 1.5rem; align-items: flex-start;
+      border: 1px solid rgba(201,168,76,.15);
+      background: var(--card); padding: 1.75rem;
+    }
+    .author-avatar-lg {
+      width: 56px; height: 56px; border-radius: 50%;
+      border: 1px solid var(--gold-dim);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem; color: var(--gold);
+      flex-shrink: 0;
+    }
+    .author-bio-text { flex: 1; }
+    .author-bio-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem; color: var(--white); margin-bottom: .25rem;
+    }
+    .author-bio-role {
+      font-size: .7rem; letter-spacing: .12em; text-transform: uppercase;
+      color: var(--gold-dim); margin-bottom: .6rem;
+    }
+    .author-bio-text p { font-size: .88rem; color: var(--text-muted); margin-bottom: 0; }
+
+    /* ── RELATED POSTS ── */
+    .related {
+      background: var(--surface);
+      border-top: 1px solid rgba(201,168,76,.1);
+      padding: 4rem 5vw;
+    }
+    .related-inner { max-width: 1100px; margin: 0 auto; }
+    .related-label {
+      font-size: .68rem; letter-spacing: .3em; text-transform: uppercase;
+      color: var(--gold-dim); margin-bottom: .75rem; text-align: center;
+    }
+    .related-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 300; color: var(--white);
+      text-align: center; margin-bottom: 2.5rem;
+    }
+    .related-title em { font-style: italic; color: var(--gold-light); }
+    .related-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem;
+    }
+    .related-card {
+      background: var(--card);
+      border: 1px solid rgba(201,168,76,.1);
+      padding: 1.6rem;
+      text-decoration: none;
+      display: block;
+      transition: border-color .35s, transform .35s;
+      position: relative; overflow: hidden;
+    }
+    .related-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      transform: scaleX(0); transform-origin: center;
+      transition: transform .45s;
+    }
+    .related-card:hover { border-color: rgba(201,168,76,.3); transform: translateY(-3px); }
+    .related-card:hover::before { transform: scaleX(1); }
+    .related-card-tag {
+      font-size: .6rem; letter-spacing: .18em; text-transform: uppercase;
+      color: var(--gold-dim); margin-bottom: .6rem; display: block;
+    }
+    .related-card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem; color: var(--white);
+      line-height: 1.3; font-weight: 300; margin-bottom: .5rem;
+    }
+    .related-card-arrow {
+      font-size: .68rem; letter-spacing: .15em; text-transform: uppercase;
+      color: var(--gold); display: block; margin-top: 1rem;
+    }
+
+    /* ── CTA STRIP ── */
+    .post-cta {
+      background: var(--black);
+      text-align: center; padding: 5rem 5vw;
+      position: relative; overflow: hidden;
+    }
+    .post-cta::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 50% 60% at 50% 50%, rgba(201,168,76,.06) 0%, transparent 70%);
+    }
+    .post-cta-inner { position: relative; z-index: 1; max-width: 540px; margin: 0 auto; }
+    .post-cta-label {
+      font-size: .68rem; letter-spacing: .3em; text-transform: uppercase;
+      color: var(--gold-dim); margin-bottom: 1rem;
+    }
+    .post-cta-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 300; color: var(--white);
+      line-height: 1.15; margin-bottom: 1rem;
+    }
+    .post-cta-title em { font-style: italic; color: var(--gold-light); }
+    .post-cta p { color: var(--text-muted); margin-bottom: 2rem; }
+    .btn-primary {
+      display: inline-block;
+      padding: .85rem 2.6rem;
+      border: 1px solid var(--gold);
+      color: var(--gold); font-family: 'Lato', sans-serif;
+      font-size: .78rem; letter-spacing: .2em; text-transform: uppercase;
+      text-decoration: none; background: transparent;
+      transition: background .35s, color .35s, box-shadow .35s;
+      cursor: pointer;
+    }
+    .btn-primary:hover {
+      background: var(--gold); color: var(--black);
+      box-shadow: 0 0 40px rgba(201,168,76,.25);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--surface);
+      border-top: 1px solid rgba(201,168,76,.12);
+      padding: 2.5rem 5vw;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 1.5rem;
+    }
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem; letter-spacing: .18em;
+      color: var(--gold); text-transform: uppercase;
+    }
+    .footer-links { display: flex; gap: 2rem; flex-wrap: wrap; }
+    .footer-links a {
+      font-size: .75rem; letter-spacing: .1em;
+      color: var(--text-muted); text-decoration: none; transition: color .3s;
+    }
+    .footer-links a:hover,
+    .footer-links a.active { color: var(--gold); }
+    .footer-social { display: flex; gap: 1.25rem; }
+    .footer-social a {
+      display: flex; align-items: center; justify-content: center;
+      width: 34px; height: 34px;
+      border: 1px solid rgba(201,168,76,.25); border-radius: 50%;
+      color: var(--text-muted); transition: color .3s, border-color .3s;
+    }
+    .footer-social a:hover { color: var(--gold); border-color: var(--gold); }
+    .footer-social svg { width: 15px; height: 15px; stroke: currentColor; fill: none; stroke-width: 1.6; }
+    .footer-copy { font-size: .72rem; color: var(--text-muted); width: 100%; text-align: center; padding-top: .5rem; }
+
+    /* ── SCROLL REVEAL ── */
+    .reveal { opacity: 0; transform: translateY(22px); transition: opacity .8s ease, transform .8s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 800px) {
+      .related-grid { grid-template-columns: 1fr; }
+      .author-bio-inner { flex-direction: column; }
+      footer { justify-content: center; text-align: center; }
+      .footer-links { justify-content: center; }
+    }
+    @media (min-width: 501px) and (max-width: 800px) {
+      .related-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html">Yoga by Destiny</a>
+  <button class="nav-toggle" aria-label="Toggle menu" onclick="this.nextElementSibling.classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul id="nav-menu">
+    <li><a href="index.html#about" onclick="document.getElementById('nav-menu').classList.remove('open')">About</a></li>
+    <li><a href="index.html#styles" onclick="document.getElementById('nav-menu').classList.remove('open')">Styles</a></li>
+    <li><a href="index.html#benefits" onclick="document.getElementById('nav-menu').classList.remove('open')">Benefits</a></li>
+    <li><a href="index.html#testimonials" onclick="document.getElementById('nav-menu').classList.remove('open')">Stories</a></li>
+    <li><a href="blog.html" class="active" onclick="document.getElementById('nav-menu').classList.remove('open')">Blog</a></li>
+    <li><a href="index.html#cta" onclick="document.getElementById('nav-menu').classList.remove('open')">Begin</a></li>
+  </ul>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="blog.html">Back to Blog</a>
+</div>
+
+<!-- POST HEADER -->
+<header class="post-header reveal">
+  <span class="post-tag">Yoga</span>
+  <h1 class="post-title">Why beginners struggle with <em>Hatha yoga</em> —<br>and how to change that</h1>
+  <div class="post-meta">
+    <span>Anastasiya</span>
+    <span class="post-meta-dot"></span>
+    <span>June 2025</span>
+    <span class="post-meta-dot"></span>
+    <span>6 min read</span>
+    <span class="post-meta-dot"></span>
+    <span>Yoga · Beginners</span>
+  </div>
+  <span class="gold-line"></span>
+</header>
+
+<!-- HERO ILLUSTRATION -->
+<div class="post-illustration reveal">
+  <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#C9A84C">
+    <circle cx="100" cy="100" r="95" stroke-width=".4" stroke="rgba(201,168,76,.2)"/>
+    <circle cx="100" cy="100" r="75" stroke-width=".4" stroke="rgba(201,168,76,.15)"/>
+    <ellipse cx="100" cy="68" rx="12" ry="30" stroke-width=".8"/>
+    <ellipse cx="100" cy="68" rx="12" ry="30" transform="rotate(36,100,100)" stroke-width=".8"/>
+    <ellipse cx="100" cy="68" rx="12" ry="30" transform="rotate(72,100,100)" stroke-width=".8"/>
+    <ellipse cx="100" cy="68" rx="12" ry="30" transform="rotate(108,100,100)" stroke-width=".8"/>
+    <ellipse cx="100" cy="68" rx="12" ry="30" transform="rotate(144,100,100)" stroke-width=".8"/>
+    <ellipse cx="100" cy="68" rx="12" ry="30" transform="rotate(180,100,100)" stroke-width=".8"/>
+    <ellipse cx="100" cy="68" rx="12" ry="30" transform="rotate(216,100,100)" stroke-width=".8"/>
+    <ellipse cx="100" cy="68" rx="12" ry="30" transform="rotate(252,100,100)" stroke-width=".8"/>
+    <ellipse cx="100" cy="68" rx="12" ry="30" transform="rotate(288,100,100)" stroke-width=".8"/>
+    <ellipse cx="100" cy="68" rx="12" ry="30" transform="rotate(324,100,100)" stroke-width=".8"/>
+    <circle cx="100" cy="100" r="14" stroke-width="1"/>
+    <circle cx="100" cy="100" r="5" fill="#C9A84C" stroke="none"/>
+  </svg>
+</div>
+
+<!-- ARTICLE BODY -->
+<article class="post-body reveal">
+
+  <p>The most common mistake new students make in their first Hatha yoga session isn't a wrong pose. It isn't a misaligned warrior or a wobbly tree. It is something far simpler, and far more invisible: <strong>they hold their breath.</strong></p>
+
+  <p>I've taught hundreds of first-time students, and within the first ten minutes of almost every introductory class, I notice the same thing. The moment a posture becomes slightly unfamiliar — the moment the body is asked to do something it hasn't done before — breathing stops. Shoulders creep toward ears. Jaws tighten. The whole body braces, as if the physical challenge were also a threat.</p>
+
+  <p>It isn't. And once students understand that, everything changes.</p>
+
+  <div class="pull-quote">
+    <p>"Flexibility is not a prerequisite for yoga. It is a result of it. The only thing you need to bring to your first class is a willingness to breathe."</p>
+  </div>
+
+  <h2>Why this happens — and why it's completely <em>understandable</em></h2>
+
+  <p>Our nervous system is wired to hold the breath under perceived stress. It's a survival reflex, ancient and automatic. When something is new, unfamiliar, or effortful, the body often interprets that as a signal to brace. This is not a character flaw. It is physiology.</p>
+
+  <p>The problem in yoga is that holding the breath creates the very tension we're trying to release. Without a steady inhale and exhale, muscles cannot soften. The parasympathetic nervous system — the one responsible for rest, recovery, and ease — never gets the signal that it's safe to switch on. The session becomes a gritting-of-teeth rather than a practice.</p>
+
+  <p>Hatha yoga, at its foundation, is a breathing practice that uses physical postures as its vehicle. Not the other way around. When students understand this, the entire orientation shifts.</p>
+
+  <div class="section-divider"><span>✦</span></div>
+
+  <h2>The three shifts that transform a first session</h2>
+
+  <h3>1. Breathe before you move</h3>
+
+  <p>Before entering any posture, take two full breaths — a slow inhale through the nose, a long exhale through the nose or mouth. This is not a warm-up ritual. It is the practice itself beginning. The movement that follows will be softer, more open, and more sustainable because the nervous system has had a moment to register safety.</p>
+
+  <div class="tip-box">
+    <span class="tip-box-label">Try this in your next session</span>
+    <ul>
+      <li>Before each new pose, pause and take one slow breath</li>
+      <li>If you notice you've stopped breathing mid-pose, soften — don't push harder</li>
+      <li>Let the exhale be slightly longer than the inhale to activate the rest response</li>
+      <li>If you can't breathe comfortably in a pose, you've gone too far</li>
+    </ul>
+  </div>
+
+  <h3>2. Use discomfort as information, not as a target</h3>
+
+  <p>Western fitness culture often frames effort as virtue — the harder, the better. Yoga asks something different. In Hatha practice, mild sensation in a muscle (a gentle stretch, a slight warmth) is useful information. Sharp, pinching, or joint pain is a signal to come out. The goal is not to endure; it is to listen.</p>
+
+  <p>Many beginners push past the point of usefulness because they believe the pose "should" look a certain way. The pose should feel a certain way. And if it doesn't feel like ease with gentle effort — if it feels like force — then the body is telling you something worth hearing.</p>
+
+  <h3>3. Release the idea of what you should look like</h3>
+
+  <p>In an online or studio class, it is tempting to watch others and adjust yourself to match. Resist this as much as you can. <strong>Your body has a different history than every other body in the room.</strong> Years of desk work, old injuries, hypermobile joints, tight hips — these all shape what a pose looks like for you, and that variation is not a deviation. It is honesty.</p>
+
+  <p>A forward fold that keeps your knees generously bent and your spine long is a vastly better Hatha yoga pose than a straight-legged version that rounds your back and grips your hamstrings. What serves your body is correct. What mimics the picture does not always.</p>
+
+  <div class="section-divider"><span>✦</span></div>
+
+  <h2>A note for those who came back after a long break</h2>
+
+  <p>Everything above applies doubly if you're returning to yoga after months or years away. The body remembers, but it also changes. The range you had before may not be there on the first day back, and that is entirely normal. Approach a returning practice with the same curiosity and gentleness you'd bring to a first session. The body rewards patience.</p>
+
+  <p>I often tell students: the yoga mat is one of the few places in modern life where doing less is sometimes the most courageous choice. Coming out of a pose early, resting in child's pose, simply lying down and breathing — these are not failures. They are the practice.</p>
+
+  <div class="pull-quote">
+    <p>"The willingness to show up — to roll out the mat even when you don't feel ready — is the real definition of a yoga practice."</p>
+  </div>
+
+  <p>If you're a beginner, I hope this gives you permission to be exactly where you are. Your first session doesn't need to be graceful. It doesn't need to look like anything. It just needs to happen — breath by breath, one small shift at a time.</p>
+
+  <p>That is more than enough. That is, in fact, everything.</p>
+
+</article>
+
+<!-- AUTHOR BIO -->
+<div class="author-bio reveal">
+  <div class="author-bio-inner">
+    <div class="author-avatar-lg">A</div>
+    <div class="author-bio-text">
+      <p class="author-bio-name">Anastasiya</p>
+      <p class="author-bio-role">Certified Yoga Teacher · Ayurveda & Meditation Guide</p>
+      <p>Anastasiya has been teaching yoga for over a decade, guiding students across all ages and backgrounds through online and in-person sessions. Her approach is rooted in classical tradition and shaped by genuine care for each individual she works with.</p>
+    </div>
+  </div>
+</div>
+
+<!-- RELATED POSTS -->
+<section class="related reveal">
+  <div class="related-inner">
+    <p class="related-label">Keep reading</p>
+    <h2 class="related-title">More from <em>the mat</em></h2>
+    <div class="related-grid">
+      <a href="post-morning-routine.html" class="related-card">
+        <span class="related-card-tag">Meditation</span>
+        <p class="related-card-title">Five minutes that will change how you start your morning</p>
+        <span class="related-card-arrow">Read more →</span>
+      </a>
+      <a href="post-vinyasa-flexibility.html" class="related-card">
+        <span class="related-card-tag">Yoga</span>
+        <p class="related-card-title">Vinyasa for people who think they're not flexible enough</p>
+        <span class="related-card-arrow">Read more →</span>
+      </a>
+      <a href="post-evening-ritual.html" class="related-card">
+        <span class="related-card-tag">Lifestyle</span>
+        <p class="related-card-title">The evening ritual that helped me sleep through the night</p>
+        <span class="related-card-arrow">Read more →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- POST CTA -->
+<section class="post-cta reveal">
+  <div class="post-cta-inner">
+    <p class="post-cta-label">Ready to begin?</p>
+    <h2 class="post-cta-title">Experience Hatha yoga<br><em>with personal guidance</em></h2>
+    <p>Put these ideas into practice in a live session with Anastasiya — tailored to your body, your pace, and exactly where you are today.</p>
+    <a href="index.html#cta" class="btn-primary">Reserve Your First Session</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-logo">Yoga by Destiny</span>
+  <nav class="footer-links" aria-label="Footer links">
+    <a href="index.html#about">About</a>
+    <a href="index.html#styles">Styles</a>
+    <a href="index.html#benefits">Benefits</a>
+    <a href="blog.html" class="active">Blog</a>
+    <a href="index.html#cta">Book a Session</a>
+  </nav>
+  <div class="footer-social">
+    <a href="https://instagram.com/destiny.of.a.yogi" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg viewBox="0 0 24 24"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r=".6" fill="currentColor" stroke="none"/></svg>
+    </a>
+    <a href="https://facebook.com/YogaWithAnastasiya" target="_blank" rel="noopener" aria-label="Facebook">
+      <svg viewBox="0 0 24 24"><path d="M16 8h-2.5a2 2 0 0 0-2 2v2H9v3h2.5v7h3v-7H17l.5-3h-3v-1.5a.5.5 0 0 1 .5-.5H17z"/><circle cx="12" cy="12" r="10"/></svg>
+    </a>
+  </div>
+  <span class="footer-copy">© 2025 Yoga by Destiny. All rights reserved.</span>
+</footer>
+
+<script>
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => io.observe(el));
+</script>
+</body>
+</html>

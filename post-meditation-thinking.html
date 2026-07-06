@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to meditate when you can't stop thinking · Yoga by Destiny</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black:#080808; --surface:#121212; --card:#1a1a14;
+      --gold:#C9A84C; --gold-light:#E8D5A3; --gold-dim:#8a6f2e;
+      --text:#d4c8a8; --text-muted:#7a7060; --white:#f5f0e8;
+    }
+    html { scroll-behavior: smooth; }
+    body { background:var(--black); color:var(--text); font-family:'Lato',sans-serif; font-weight:300; line-height:1.75; overflow-x:hidden; }
+    nav { position:fixed; top:0; left:0; right:0; z-index:1000; display:flex; justify-content:space-between; align-items:center; padding:1rem 4vw; background:rgba(8,8,8,.97); border-bottom:1px solid rgba(201,168,76,.12); backdrop-filter:blur(8px); }
+    .nav-logo { font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; letter-spacing:.14em; color:var(--gold); text-transform:uppercase; text-decoration:none; white-space:nowrap; flex-shrink:0; }
+    nav ul { list-style:none; display:flex; align-items:center; gap:0; flex-wrap:nowrap; margin:0; padding:0; }
+    nav ul li { display:block; }
+    nav ul li a { display:block; padding:.5rem .9rem; font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; color:var(--text-muted); text-decoration:none; white-space:nowrap; transition:color .3s; }
+    nav ul li a:hover, nav ul li a.active { color:var(--gold); }
+    .nav-toggle { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:.4rem; }
+    .nav-toggle span { display:block; width:22px; height:1px; background:var(--gold); }
+    @media(max-width:720px){ .nav-toggle{display:flex;} nav ul{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:rgba(8,8,8,.98);border-bottom:1px solid rgba(201,168,76,.15);padding:.75rem 0 1rem;} nav ul.open{display:flex;} nav ul li a{padding:.7rem 4vw;font-size:.8rem;} }
+    .breadcrumb { padding:6.5rem 5vw 0; max-width:780px; margin:0 auto; }
+    .breadcrumb a { font-size:.7rem; letter-spacing:.18em; text-transform:uppercase; color:var(--text-muted); text-decoration:none; display:inline-flex; align-items:center; gap:.45rem; transition:color .3s; }
+    .breadcrumb a::before { content:'←'; }
+    .breadcrumb a:hover { color:var(--gold); }
+    .post-header { max-width:780px; margin:0 auto; padding:2.5rem 5vw 0; text-align:center; }
+    .post-tag { display:inline-block; font-size:.62rem; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); border:1px solid var(--gold-dim); padding:.25rem .75rem; margin-bottom:1.5rem; }
+    .post-title { font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,5vw,3.4rem); font-weight:300; color:var(--white); line-height:1.15; margin-bottom:1.5rem; }
+    .post-title em { font-style:italic; color:var(--gold-light); }
+    .post-meta { display:flex; align-items:center; justify-content:center; gap:.85rem; flex-wrap:wrap; font-size:.72rem; color:var(--text-muted); letter-spacing:.06em; margin-bottom:2.5rem; }
+    .post-meta-dot { width:3px; height:3px; border-radius:50%; background:var(--gold-dim); }
+    .gold-line { display:block; height:1px; background:linear-gradient(90deg,transparent,var(--gold),transparent); max-width:340px; margin:0 auto 3.5rem; }
+    .post-illustration { max-width:900px; margin:0 auto; padding:0 5vw 3.5rem; display:flex; justify-content:center; }
+    .post-illustration svg { width:min(300px,70vw); height:min(300px,70vw); opacity:.75; }
+    .post-body { max-width:700px; margin:0 auto; padding:0 5vw 5rem; }
+    .post-body p { font-size:1.05rem; line-height:1.9; color:var(--text); margin-bottom:1.6rem; }
+    .post-body h2 { font-family:'Cormorant Garamond',serif; font-size:clamp(1.5rem,3vw,2rem); font-weight:300; color:var(--white); line-height:1.2; margin:3rem 0 1rem; }
+    .post-body h2 em { font-style:italic; color:var(--gold-light); }
+    .post-body h3 { font-family:'Cormorant Garamond',serif; font-size:1.25rem; color:var(--gold-light); font-weight:400; margin:2rem 0 .75rem; }
+    .post-body strong { color:var(--white); font-weight:400; }
+    .pull-quote { border-left:1px solid var(--gold); padding:1.25rem 1.75rem; margin:2.5rem 0; background:rgba(201,168,76,.04); }
+    .pull-quote p { font-family:'Cormorant Garamond',serif; font-size:1.35rem; font-style:italic; color:var(--gold-light); line-height:1.55; margin-bottom:0; }
+    .tip-box { border:1px solid rgba(201,168,76,.2); background:var(--card); padding:1.5rem 1.75rem; margin:2.5rem 0; }
+    .tip-box-label { font-size:.62rem; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); margin-bottom:.75rem; display:block; }
+    .tip-box ul { list-style:none; padding:0; margin-top:.5rem; }
+    .tip-box ul li { font-size:.95rem; color:var(--text); padding:.3rem 0 .3rem 1.2rem; position:relative; }
+    .tip-box ul li::before { content:'—'; position:absolute; left:0; color:var(--gold-dim); }
+    .section-divider { display:flex; align-items:center; gap:1rem; margin:3rem 0; }
+    .section-divider::before,.section-divider::after { content:''; flex:1; height:1px; background:linear-gradient(90deg,transparent,rgba(201,168,76,.3)); }
+    .section-divider::after { background:linear-gradient(270deg,transparent,rgba(201,168,76,.3)); }
+    .section-divider span { color:var(--gold); font-size:.9rem; flex-shrink:0; }
+    .author-bio { max-width:700px; margin:0 auto 3rem; padding:0 5vw; }
+    .author-bio-inner { display:flex; gap:1.5rem; align-items:flex-start; border:1px solid rgba(201,168,76,.15); background:var(--card); padding:1.75rem; }
+    .author-avatar-lg { width:56px; height:56px; border-radius:50%; border:1px solid var(--gold-dim); display:flex; align-items:center; justify-content:center; font-family:'Cormorant Garamond',serif; font-size:1.4rem; color:var(--gold); flex-shrink:0; }
+    .author-bio-text { flex:1; }
+    .author-bio-name { font-family:'Cormorant Garamond',serif; font-size:1.1rem; color:var(--white); margin-bottom:.25rem; }
+    .author-bio-role { font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; color:var(--gold-dim); margin-bottom:.6rem; }
+    .author-bio-text p { font-size:.88rem; color:var(--text-muted); margin-bottom:0; }
+    .related { background:var(--surface); border-top:1px solid rgba(201,168,76,.1); padding:4rem 5vw; }
+    .related-inner { max-width:1100px; margin:0 auto; }
+    .related-label { font-size:.68rem; letter-spacing:.3em; text-transform:uppercase; color:var(--gold-dim); margin-bottom:.75rem; text-align:center; }
+    .related-title { font-family:'Cormorant Garamond',serif; font-size:clamp(1.6rem,3vw,2.2rem); font-weight:300; color:var(--white); text-align:center; margin-bottom:2.5rem; }
+    .related-title em { font-style:italic; color:var(--gold-light); }
+    .related-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; }
+    .related-card { background:var(--card); border:1px solid rgba(201,168,76,.1); padding:1.6rem; text-decoration:none; display:block; transition:border-color .35s,transform .35s; position:relative; overflow:hidden; }
+    .related-card::before { content:''; position:absolute; top:0; left:0; right:0; height:1px; background:linear-gradient(90deg,transparent,var(--gold),transparent); transform:scaleX(0); transform-origin:center; transition:transform .45s; }
+    .related-card:hover { border-color:rgba(201,168,76,.3); transform:translateY(-3px); }
+    .related-card:hover::before { transform:scaleX(1); }
+    .related-card-tag { font-size:.6rem; letter-spacing:.18em; text-transform:uppercase; color:var(--gold-dim); margin-bottom:.6rem; display:block; }
+    .related-card-title { font-family:'Cormorant Garamond',serif; font-size:1.1rem; color:var(--white); line-height:1.3; font-weight:300; margin-bottom:.5rem; }
+    .related-card-arrow { font-size:.68rem; letter-spacing:.15em; text-transform:uppercase; color:var(--gold); display:block; margin-top:1rem; }
+    .post-cta { background:var(--black); text-align:center; padding:5rem 5vw; position:relative; overflow:hidden; }
+    .post-cta::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 50% 60% at 50% 50%,rgba(201,168,76,.06) 0%,transparent 70%); }
+    .post-cta-inner { position:relative; z-index:1; max-width:540px; margin:0 auto; }
+    .post-cta-label { font-size:.68rem; letter-spacing:.3em; text-transform:uppercase; color:var(--gold-dim); margin-bottom:1rem; }
+    .post-cta-title { font-family:'Cormorant Garamond',serif; font-size:clamp(1.8rem,3.5vw,2.6rem); font-weight:300; color:var(--white); line-height:1.15; margin-bottom:1rem; }
+    .post-cta-title em { font-style:italic; color:var(--gold-light); }
+    .post-cta p { color:var(--text-muted); margin-bottom:2rem; }
+    .btn-primary { display:inline-block; padding:.85rem 2.6rem; border:1px solid var(--gold); color:var(--gold); font-family:'Lato',sans-serif; font-size:.78rem; letter-spacing:.2em; text-transform:uppercase; text-decoration:none; background:transparent; transition:background .35s,color .35s,box-shadow .35s; cursor:pointer; }
+    .btn-primary:hover { background:var(--gold); color:var(--black); box-shadow:0 0 40px rgba(201,168,76,.25); }
+    footer { background:var(--surface); border-top:1px solid rgba(201,168,76,.12); padding:2.5rem 5vw; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1.5rem; }
+    .footer-logo { font-family:'Cormorant Garamond',serif; font-size:1rem; letter-spacing:.18em; color:var(--gold); text-transform:uppercase; }
+    .footer-links { display:flex; gap:2rem; flex-wrap:wrap; }
+    .footer-links a { font-size:.75rem; letter-spacing:.1em; color:var(--text-muted); text-decoration:none; transition:color .3s; }
+    .footer-links a:hover, .footer-links a.active { color:var(--gold); }
+    .footer-social { display:flex; gap:1.25rem; }
+    .footer-social a { display:flex; align-items:center; justify-content:center; width:34px; height:34px; border:1px solid rgba(201,168,76,.25); border-radius:50%; color:var(--text-muted); transition:color .3s,border-color .3s; }
+    .footer-social a:hover { color:var(--gold); border-color:var(--gold); }
+    .footer-social svg { width:15px; height:15px; stroke:currentColor; fill:none; stroke-width:1.6; }
+    .footer-copy { font-size:.72rem; color:var(--text-muted); width:100%; text-align:center; padding-top:.5rem; }
+    .reveal { opacity:0; transform:translateY(22px); transition:opacity .8s ease,transform .8s ease; }
+    .reveal.visible { opacity:1; transform:none; }
+    @media(max-width:800px){ .related-grid{grid-template-columns:1fr;} .author-bio-inner{flex-direction:column;} footer{justify-content:center;text-align:center;} .footer-links{justify-content:center;} }
+    @media(min-width:501px) and (max-width:800px){ .related-grid{grid-template-columns:1fr 1fr;} }
+    @media(prefers-reduced-motion:reduce){ .reveal{opacity:1;transform:none;transition:none;} }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">Yoga by Destiny</a>
+  <button class="nav-toggle" aria-label="Toggle menu" onclick="this.nextElementSibling.classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul id="nav-menu">
+    <li><a href="index.html#about" onclick="document.getElementById('nav-menu').classList.remove('open')">About</a></li>
+    <li><a href="index.html#styles" onclick="document.getElementById('nav-menu').classList.remove('open')">Styles</a></li>
+    <li><a href="index.html#benefits" onclick="document.getElementById('nav-menu').classList.remove('open')">Benefits</a></li>
+    <li><a href="index.html#testimonials" onclick="document.getElementById('nav-menu').classList.remove('open')">Stories</a></li>
+    <li><a href="blog.html" class="active" onclick="document.getElementById('nav-menu').classList.remove('open')">Blog</a></li>
+    <li><a href="index.html#cta" onclick="document.getElementById('nav-menu').classList.remove('open')">Begin</a></li>
+  </ul>
+</nav>
+
+<div class="breadcrumb"><a href="blog.html">Back to Blog</a></div>
+
+<header class="post-header reveal">
+  <span class="post-tag">Meditation</span>
+  <h1 class="post-title">How to meditate when you<br><em>can't stop thinking</em></h1>
+  <div class="post-meta">
+    <span>Anastasiya</span><span class="post-meta-dot"></span>
+    <span>December 2024</span><span class="post-meta-dot"></span>
+    <span>6 min read</span><span class="post-meta-dot"></span>
+    <span>Meditation · Mindfulness</span>
+  </div>
+  <span class="gold-line"></span>
+</header>
+
+<div class="post-illustration reveal">
+  <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#C9A84C">
+    <path d="M30 100 Q30 30 100 30 Q170 30 170 100 Q170 144 130 160 L100 180 L70 160 Q30 144 30 100Z" stroke-width=".8"/>
+    <path d="M55 100 Q55 58 100 58 Q145 58 145 100 Q145 124 122 135 L100 148 L78 135 Q55 124 55 100Z" stroke-width=".6"/>
+    <circle cx="100" cy="100" r="22" stroke-width=".9"/>
+    <circle cx="100" cy="100" r="8" stroke-width="1"/>
+    <circle cx="100" cy="100" r="3" fill="#C9A84C" stroke="none"/>
+  </svg>
+</div>
+
+<article class="post-body reveal">
+
+  <p>"I can't meditate. My mind never stops." It is the single thing I hear most often from people who have tried meditation and given up — or from those who have never begun because they're already certain it won't work for them.</p>
+
+  <p>I understand the frustration. You sit down, close your eyes, and immediately the mind produces a remarkable quantity of noise: unfinished conversations, grocery lists, replays of yesterday's difficult moment, plans for an imagined future. It can feel like being handed a violin and told to play a concerto on the first try. The gap between intention and experience is disorienting.</p>
+
+  <p>But here is the thing most people are never told: <strong>a busy mind during meditation is not a sign that you're doing it wrong. It is the practice itself.</strong></p>
+
+  <div class="pull-quote">
+    <p>"Meditation is not the absence of thought. It is the practice of noticing thought — and gently, without judgment, returning."</p>
+  </div>
+
+  <h2>The reframe that changes <em>everything</em></h2>
+
+  <p>Most people assume meditation means achieving a blank mind — a kind of mental silence, free from thought. This is a misunderstanding so widespread that it has kept millions of people from a practice that could genuinely help them.</p>
+
+  <p>What meditation actually trains is something more modest and far more useful: the ability to notice when you have been carried away by a thought, and to return. That's it. Notice. Return. Notice. Return.</p>
+
+  <p>The thoughts themselves are not the obstacle. They are the weights you're lifting. Every time your attention wanders — to a worry, a plan, a memory — and you notice it has wandered, and you bring it back to the breath or the present moment, you have completed one repetition. That is the exercise. A session full of wandering and returning is not a failed session. It is a highly productive one.</p>
+
+  <div class="tip-box">
+    <span class="tip-box-label">What to do when a thought arrives</span>
+    <ul>
+      <li>Notice it without engaging — simply label it: "thinking"</li>
+      <li>Don't push it away — that creates more tension</li>
+      <li>Don't follow it — that's the wandering to return from</li>
+      <li>Gently bring attention back to the breath or body</li>
+      <li>Repeat, without self-criticism, as many times as needed</li>
+    </ul>
+  </div>
+
+  <h2>Why the busy mind is actually <em>useful information</em></h2>
+
+  <p>A meditation session that feels chaotic — where the mind leaps from topic to topic and you spend most of the time returning rather than resting — is often a sign that your nervous system needed the release. The thoughts that flood in when you sit quietly are frequently the ones you've been too busy to process during the day. The stillness is not creating the noise; it is simply revealing what was already there.</p>
+
+  <p>Over time, as the practice becomes more familiar, the mind does settle — not because it becomes empty, but because you become less reactive to its movements. You develop what some teachers call the "witness" — a part of awareness that can observe thought without being swept away by it. That witness grows stronger with every session, including the chaotic ones.</p>
+
+  <div class="section-divider"><span>✦</span></div>
+
+  <h2>A simple technique for restless minds</h2>
+
+  <h3>Counting breath</h3>
+  <p>If focusing on the breath alone feels too abstract, try counting. Inhale, exhale — one. Inhale, exhale — two. Count to ten, then return to one. When you notice you've lost count — and you will — simply return to one without frustration. The losing count is not failure. It's the moment of awakening that is the whole point of the practice.</p>
+
+  <h3>Body scan instead of breath</h3>
+  <p>For people whose minds are particularly active, anchoring attention in physical sensation rather than the abstract breath can help. Start at the crown of the head and slowly move awareness down through the body — scalp, forehead, jaw, throat, chest, belly — noticing sensation without trying to change it. The concreteness of physical feeling gives the mind something more tangible to return to.</p>
+
+  <h3>Shorter sessions, more often</h3>
+  <p>Five minutes every day will build the practice more effectively than a single forty-minute session once a week. Begin with five minutes. Use a timer so you're not watching the clock. When the time is up, notice how you feel — not during, which can be discouraging, but after. The after is usually telling.</p>
+
+  <div class="pull-quote">
+    <p>"You do not have to be calm to meditate. You simply have to be willing to sit with whatever is present — and keep returning."</p>
+  </div>
+
+  <p>The mind will always produce thought. That is what minds do, the same way hearts beat and lungs breathe. The goal was never silence. The goal is to stop being a hostage to the noise — to be able to observe it, acknowledge it, and choose where to place your attention.</p>
+
+  <p>That skill, built slowly and imperfectly across hundreds of ordinary sessions, is one of the most quietly transformative things a person can do. Your busy mind is not an obstacle to meditation. It is exactly where the practice begins.</p>
+
+</article>
+
+<div class="author-bio reveal">
+  <div class="author-bio-inner">
+    <div class="author-avatar-lg">A</div>
+    <div class="author-bio-text">
+      <p class="author-bio-name">Anastasiya</p>
+      <p class="author-bio-role">Certified Yoga Teacher · Ayurveda & Meditation Guide</p>
+      <p>Anastasiya has been teaching yoga for over a decade, guiding students across all ages and backgrounds through online and in-person sessions rooted in classical tradition and genuine care.</p>
+    </div>
+  </div>
+</div>
+
+<section class="related reveal">
+  <div class="related-inner">
+    <p class="related-label">Keep reading</p>
+    <h2 class="related-title">More from <em>the mat</em></h2>
+    <div class="related-grid">
+      <a href="post-morning-routine.html" class="related-card">
+        <span class="related-card-tag">Meditation</span>
+        <p class="related-card-title">Five minutes that will change how you start your morning</p>
+        <span class="related-card-arrow">Read more →</span>
+      </a>
+      <a href="post-hatha-beginners.html" class="related-card">
+        <span class="related-card-tag">Yoga</span>
+        <p class="related-card-title">Why beginners struggle with Hatha yoga — and how to change that</p>
+        <span class="related-card-arrow">Read more →</span>
+      </a>
+      <a href="post-evening-ritual.html" class="related-card">
+        <span class="related-card-tag">Lifestyle</span>
+        <p class="related-card-title">The evening ritual that helped me sleep through the night</p>
+        <span class="related-card-arrow">Read more →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="post-cta reveal">
+  <div class="post-cta-inner">
+    <p class="post-cta-label">Ready to begin?</p>
+    <h2 class="post-cta-title">Explore meditation<br><em>with personal guidance</em></h2>
+    <p>Bring this practice to life in a live session with Anastasiya — tailored to your mind, your pace, and exactly where you are today.</p>
+    <a href="index.html#cta" class="btn-primary">Reserve Your First Session</a>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-logo">Yoga by Destiny</span>
+  <nav class="footer-links">
+    <a href="index.html#about">About</a>
+    <a href="index.html#styles">Styles</a>
+    <a href="index.html#benefits">Benefits</a>
+    <a href="blog.html" class="active">Blog</a>
+    <a href="index.html#cta">Book a Session</a>
+  </nav>
+  <div class="footer-social">
+    <a href="https://instagram.com/destiny.of.a.yogi" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg viewBox="0 0 24 24"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r=".6" fill="currentColor" stroke="none"/></svg>
+    </a>
+    <a href="https://facebook.com/YogaWithAnastasiya" target="_blank" rel="noopener" aria-label="Facebook">
+      <svg viewBox="0 0 24 24"><path d="M16 8h-2.5a2 2 0 0 0-2 2v2H9v3h2.5v7h3v-7H17l.5-3h-3v-1.5a.5.5 0 0 1 .5-.5H17z"/><circle cx="12" cy="12" r="10"/></svg>
+    </a>
+  </div>
+  <span class="footer-copy">© 2025 Yoga by Destiny. All rights reserved.</span>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver(entries => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);} }); }, {threshold:.1});
+  reveals.forEach(el => io.observe(el));
+</script>
+</body>
+</html>

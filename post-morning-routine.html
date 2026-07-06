@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Five minutes that will change how you start your morning · Yoga by Destiny</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black:#080808; --surface:#121212; --card:#1a1a14;
+      --gold:#C9A84C; --gold-light:#E8D5A3; --gold-dim:#8a6f2e;
+      --text:#d4c8a8; --text-muted:#7a7060; --white:#f5f0e8;
+    }
+    html { scroll-behavior: smooth; }
+    body { background:var(--black); color:var(--text); font-family:'Lato',sans-serif; font-weight:300; line-height:1.75; overflow-x:hidden; }
+    nav { position:fixed; top:0; left:0; right:0; z-index:1000; display:flex; justify-content:space-between; align-items:center; padding:1rem 4vw; background:rgba(8,8,8,.97); border-bottom:1px solid rgba(201,168,76,.12); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); }
+    .nav-logo { font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; letter-spacing:.14em; color:var(--gold); text-transform:uppercase; text-decoration:none; white-space:nowrap; flex-shrink:0; }
+    nav ul { list-style:none; display:flex; align-items:center; gap:0; flex-wrap:nowrap; margin:0; padding:0; }
+    nav ul li { display:block; }
+    nav ul li a { display:block; padding:.5rem .9rem; font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; color:var(--text-muted); text-decoration:none; white-space:nowrap; transition:color .3s; cursor:pointer; }
+    nav ul li a:hover, nav ul li a.active { color:var(--gold); }
+    .nav-toggle { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:.4rem; }
+    .nav-toggle span { display:block; width:22px; height:1px; background:var(--gold); transition:.3s; }
+    @media(max-width:720px){ .nav-toggle{display:flex;} nav ul{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:rgba(8,8,8,.98);border-bottom:1px solid rgba(201,168,76,.15);padding:.75rem 0 1rem;gap:0;} nav ul.open{display:flex;} nav ul li a{padding:.7rem 4vw;font-size:.8rem;} }
+    .breadcrumb { padding:6.5rem 5vw 0; max-width:780px; margin:0 auto; }
+    .breadcrumb a { font-size:.7rem; letter-spacing:.18em; text-transform:uppercase; color:var(--text-muted); text-decoration:none; display:inline-flex; align-items:center; gap:.45rem; transition:color .3s; }
+    .breadcrumb a::before { content:'←'; }
+    .breadcrumb a:hover { color:var(--gold); }
+    .post-header { max-width:780px; margin:0 auto; padding:2.5rem 5vw 0; text-align:center; }
+    .post-tag { display:inline-block; font-size:.62rem; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); border:1px solid var(--gold-dim); padding:.25rem .75rem; margin-bottom:1.5rem; }
+    .post-title { font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,5vw,3.4rem); font-weight:300; color:var(--white); line-height:1.15; margin-bottom:1.5rem; }
+    .post-title em { font-style:italic; color:var(--gold-light); }
+    .post-meta { display:flex; align-items:center; justify-content:center; gap:.85rem; flex-wrap:wrap; font-size:.72rem; color:var(--text-muted); letter-spacing:.06em; margin-bottom:2.5rem; }
+    .post-meta-dot { width:3px; height:3px; border-radius:50%; background:var(--gold-dim); }
+    .gold-line { display:block; height:1px; background:linear-gradient(90deg,transparent,var(--gold),transparent); max-width:340px; margin:0 auto 3.5rem; }
+    .post-illustration { max-width:900px; margin:0 auto; padding:0 5vw 3.5rem; display:flex; justify-content:center; }
+    .post-illustration svg { width:min(300px,65vw); height:min(300px,65vw); opacity:.75; }
+    .post-body { max-width:700px; margin:0 auto; padding:0 5vw 5rem; }
+    .post-body p { font-size:1.05rem; line-height:1.9; color:var(--text); margin-bottom:1.6rem; }
+    .post-body h2 { font-family:'Cormorant Garamond',serif; font-size:clamp(1.5rem,3vw,2rem); font-weight:300; color:var(--white); line-height:1.2; margin:3rem 0 1rem; }
+    .post-body h2 em { font-style:italic; color:var(--gold-light); }
+    .post-body h3 { font-family:'Cormorant Garamond',serif; font-size:1.25rem; color:var(--gold-light); font-weight:400; margin:2rem 0 .75rem; }
+    .post-body strong { color:var(--white); font-weight:400; }
+    .post-body em { color:var(--gold-light); font-style:italic; }
+    .pull-quote { border-left:1px solid var(--gold); padding:1.25rem 1.75rem; margin:2.5rem 0; background:rgba(201,168,76,.04); }
+    .pull-quote p { font-family:'Cormorant Garamond',serif; font-size:1.35rem; font-style:italic; color:var(--gold-light); line-height:1.55; margin-bottom:0; }
+    .tip-box { border:1px solid rgba(201,168,76,.2); background:var(--card); padding:1.5rem 1.75rem; margin:2.5rem 0; }
+    .tip-box-label { font-size:.62rem; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); margin-bottom:.75rem; display:block; }
+    .tip-box p { font-size:.95rem; margin-bottom:0; }
+    .tip-box ul { list-style:none; padding:0; margin-top:.5rem; }
+    .tip-box ul li { font-size:.95rem; color:var(--text); padding:.3rem 0 .3rem 1.2rem; position:relative; }
+    .tip-box ul li::before { content:'—'; position:absolute; left:0; color:var(--gold-dim); }
+    .section-divider { display:flex; align-items:center; gap:1rem; margin:3rem 0; }
+    .section-divider::before, .section-divider::after { content:''; flex:1; height:1px; background:linear-gradient(90deg,transparent,rgba(201,168,76,.3)); }
+    .section-divider::after { background:linear-gradient(270deg,transparent,rgba(201,168,76,.3)); }
+    .section-divider span { color:var(--gold); font-size:.9rem; flex-shrink:0; }
+    .author-bio { max-width:700px; margin:0 auto 3rem; padding:0 5vw; }
+    .author-bio-inner { display:flex; gap:1.5rem; align-items:flex-start; border:1px solid rgba(201,168,76,.15); background:var(--card); padding:1.75rem; }
+    .author-avatar-lg { width:56px; height:56px; border-radius:50%; border:1px solid var(--gold-dim); display:flex; align-items:center; justify-content:center; font-family:'Cormorant Garamond',serif; font-size:1.4rem; color:var(--gold); flex-shrink:0; }
+    .author-bio-text { flex:1; }
+    .author-bio-name { font-family:'Cormorant Garamond',serif; font-size:1.1rem; color:var(--white); margin-bottom:.25rem; }
+    .author-bio-role { font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; color:var(--gold-dim); margin-bottom:.6rem; }
+    .author-bio-text p { font-size:.88rem; color:var(--text-muted); margin-bottom:0; }
+    .related { background:var(--surface); border-top:1px solid rgba(201,168,76,.1); padding:4rem 5vw; }
+    .related-inner { max-width:1100px; margin:0 auto; }
+    .related-label { font-size:.68rem; letter-spacing:.3em; text-transform:uppercase; color:var(--gold-dim); margin-bottom:.75rem; text-align:center; }
+    .related-title { font-family:'Cormorant Garamond',serif; font-size:clamp(1.6rem,3vw,2.2rem); font-weight:300; color:var(--white); text-align:center; margin-bottom:2.5rem; }
+    .related-title em { font-style:italic; color:var(--gold-light); }
+    .related-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; }
+    .related-card { background:var(--card); border:1px solid rgba(201,168,76,.1); padding:1.6rem; text-decoration:none; display:block; transition:border-color .35s,transform .35s; position:relative; overflow:hidden; }
+    .related-card::before { content:''; position:absolute; top:0; left:0; right:0; height:1px; background:linear-gradient(90deg,transparent,var(--gold),transparent); transform:scaleX(0); transform-origin:center; transition:transform .45s; }
+    .related-card:hover { border-color:rgba(201,168,76,.3); transform:translateY(-3px); }
+    .related-card:hover::before { transform:scaleX(1); }
+    .related-card-tag { font-size:.6rem; letter-spacing:.18em; text-transform:uppercase; color:var(--gold-dim); margin-bottom:.6rem; display:block; }
+    .related-card-title { font-family:'Cormorant Garamond',serif; font-size:1.1rem; color:var(--white); line-height:1.3; font-weight:300; margin-bottom:.5rem; }
+    .related-card-arrow { font-size:.68rem; letter-spacing:.15em; text-transform:uppercase; color:var(--gold); display:block; margin-top:1rem; }
+    .post-cta { background:var(--black); text-align:center; padding:5rem 5vw; position:relative; overflow:hidden; }
+    .post-cta::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 50% 60% at 50% 50%,rgba(201,168,76,.06) 0%,transparent 70%); }
+    .post-cta-inner { position:relative; z-index:1; max-width:540px; margin:0 auto; }
+    .post-cta-label { font-size:.68rem; letter-spacing:.3em; text-transform:uppercase; color:var(--gold-dim); margin-bottom:1rem; }
+    .post-cta-title { font-family:'Cormorant Garamond',serif; font-size:clamp(1.8rem,3.5vw,2.6rem); font-weight:300; color:var(--white); line-height:1.15; margin-bottom:1rem; }
+    .post-cta-title em { font-style:italic; color:var(--gold-light); }
+    .post-cta p { color:var(--text-muted); margin-bottom:2rem; }
+    .btn-primary { display:inline-block; padding:.85rem 2.6rem; border:1px solid var(--gold); color:var(--gold); font-family:'Lato',sans-serif; font-size:.78rem; letter-spacing:.2em; text-transform:uppercase; text-decoration:none; background:transparent; transition:background .35s,color .35s,box-shadow .35s; cursor:pointer; }
+    .btn-primary:hover { background:var(--gold); color:var(--black); box-shadow:0 0 40px rgba(201,168,76,.25); }
+    footer { background:var(--surface); border-top:1px solid rgba(201,168,76,.12); padding:2.5rem 5vw; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1.5rem; }
+    .footer-logo { font-family:'Cormorant Garamond',serif; font-size:1rem; letter-spacing:.18em; color:var(--gold); text-transform:uppercase; }
+    .footer-links { display:flex; gap:2rem; flex-wrap:wrap; }
+    .footer-links a { font-size:.75rem; letter-spacing:.1em; color:var(--text-muted); text-decoration:none; transition:color .3s; }
+    .footer-links a:hover, .footer-links a.active { color:var(--gold); }
+    .footer-social { display:flex; gap:1.25rem; }
+    .footer-social a { display:flex; align-items:center; justify-content:center; width:34px; height:34px; border:1px solid rgba(201,168,76,.25); border-radius:50%; color:var(--text-muted); transition:color .3s,border-color .3s; }
+    .footer-social a:hover { color:var(--gold); border-color:var(--gold); }
+    .footer-social svg { width:15px; height:15px; stroke:currentColor; fill:none; stroke-width:1.6; }
+    .footer-copy { font-size:.72rem; color:var(--text-muted); width:100%; text-align:center; padding-top:.5rem; }
+    .reveal { opacity:0; transform:translateY(22px); transition:opacity .8s ease,transform .8s ease; }
+    .reveal.visible { opacity:1; transform:none; }
+    @media(max-width:800px){ .related-grid{grid-template-columns:1fr;} .author-bio-inner{flex-direction:column;} footer{justify-content:center;text-align:center;} .footer-links{justify-content:center;} }
+    @media(min-width:501px) and (max-width:800px){ .related-grid{grid-template-columns:1fr 1fr;} }
+    @media(prefers-reduced-motion:reduce){ .reveal{opacity:1;transform:none;transition:none;} }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">Yoga by Destiny</a>
+  <button class="nav-toggle" aria-label="Toggle menu" onclick="this.nextElementSibling.classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul id="nav-menu">
+    <li><a href="index.html#about" onclick="document.getElementById('nav-menu').classList.remove('open')">About</a></li>
+    <li><a href="index.html#styles" onclick="document.getElementById('nav-menu').classList.remove('open')">Styles</a></li>
+    <li><a href="index.html#benefits" onclick="document.getElementById('nav-menu').classList.remove('open')">Benefits</a></li>
+    <li><a href="index.html#testimonials" onclick="document.getElementById('nav-menu').classList.remove('open')">Stories</a></li>
+    <li><a href="blog.html" class="active" onclick="document.getElementById('nav-menu').classList.remove('open')">Blog</a></li>
+    <li><a href="index.html#cta" onclick="document.getElementById('nav-menu').classList.remove('open')">Begin</a></li>
+  </ul>
+</nav>
+
+<div class="breadcrumb"><a href="blog.html">Back to Blog</a></div>
+
+<header class="post-header reveal">
+  <span class="post-tag">Meditation</span>
+  <h1 class="post-title">Five minutes that will change<br>how you start your <em>morning</em></h1>
+  <div class="post-meta">
+    <span>Anastasiya</span><span class="post-meta-dot"></span>
+    <span>May 2025</span><span class="post-meta-dot"></span>
+    <span>5 min read</span><span class="post-meta-dot"></span>
+    <span>Meditation · Breathwork</span>
+  </div>
+  <span class="gold-line"></span>
+</header>
+
+<div class="post-illustration reveal">
+  <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#C9A84C">
+    <circle cx="100" cy="100" r="92" stroke-width=".4" stroke="rgba(201,168,76,.2)"/>
+    <circle cx="100" cy="100" r="64" stroke-width=".5" stroke="rgba(201,168,76,.18)"/>
+    <circle cx="100" cy="100" r="36" stroke-width=".6"/>
+    <circle cx="100" cy="100" r="14" stroke-width="1"/>
+    <line x1="100" y1="8" x2="100" y2="192" stroke-width=".4" stroke="rgba(201,168,76,.25)"/>
+    <line x1="8" y1="100" x2="192" y2="100" stroke-width=".4" stroke="rgba(201,168,76,.25)"/>
+    <line x1="29" y1="29" x2="171" y2="171" stroke-width=".3" stroke="rgba(201,168,76,.2)"/>
+    <line x1="171" y1="29" x2="29" y2="171" stroke-width=".3" stroke="rgba(201,168,76,.2)"/>
+    <circle cx="100" cy="100" r="4" fill="#C9A84C" stroke="none"/>
+    <!-- Breath wave -->
+    <path d="M40 130 Q55 110 70 130 Q85 150 100 130 Q115 110 130 130 Q145 150 160 130" stroke-width="1" stroke="rgba(201,168,76,.7)"/>
+  </svg>
+</div>
+
+<article class="post-body reveal">
+
+  <p>You don't need a dedicated meditation room, a singing bowl, or forty-five uninterrupted minutes to begin a meaningful morning practice. You need five minutes — and you don't even have to get out of bed first.</p>
+
+  <p>I started teaching this simple breathwork routine after noticing something consistent among my students: the ones who struggled most with stillness in class were almost always the ones who began their day by immediately reaching for their phone. Before their eyes had fully adjusted to the light, their nervous system was already flooded with information. The day began at full speed, and it stayed there.</p>
+
+  <p><strong>What we practise in the morning sets the tone for the hours that follow.</strong> Not in a vague, aspirational way — in a measurable, physiological way. The first breath you take with intention each morning tells your nervous system something important: that there is no emergency. That it is safe to be present. That today doesn't have to begin in urgency.</p>
+
+  <div class="pull-quote">
+    <p>"How you begin the morning shapes how the rest of the day unfolds. Five minutes of conscious breathing is not a luxury — it is an anchor."</p>
+  </div>
+
+  <h2>The five-minute <em>morning breath practice</em></h2>
+
+  <p>This routine works whether you're sitting up in bed, cross-legged on a cushion, or lying flat on your back. The posture matters less than the attention. Start here:</p>
+
+  <h3>Minute one — simply notice</h3>
+  <p>Before doing anything at all, become aware that you are breathing. Don't change it yet. Just notice: is your breath shallow or deep? Is it in your chest or your belly? Is your exhale shorter than your inhale? Observation without judgment is the beginning of every good practice.</p>
+
+  <h3>Minutes two and three — extend the exhale</h3>
+  <p>Breathe in through your nose for a count of four. Breathe out through your nose for a count of six. The longer exhale activates the parasympathetic nervous system — the branch responsible for calm, digestion, and rest. This is not metaphor; it is physiology. Your heart rate will slow. Your shoulders will drop. Do this for two full minutes, without hurrying.</p>
+
+  <div class="tip-box">
+    <span class="tip-box-label">The 4-6 breath — a quick reference</span>
+    <ul>
+      <li>Inhale through the nose for 4 counts</li>
+      <li>No pause — flow straight into the exhale</li>
+      <li>Exhale through the nose for 6 counts</li>
+      <li>Let the belly soften on the inhale, draw gently in on the exhale</li>
+      <li>If 4-6 feels forced, try 3-5 — the ratio matters more than the numbers</li>
+    </ul>
+  </div>
+
+  <h3>Minutes four and five — set a single intention</h3>
+  <p>Return to natural breathing. Then ask yourself one question, quietly, without pressure: <em>What quality do I want to carry into today?</em> Not a to-do list. Not a goal. A quality — patience, curiosity, warmth, steadiness. Hold that word for a few breaths. Let it settle somewhere before the noise of the day begins.</p>
+
+  <div class="section-divider"><span>✦</span></div>
+
+  <h2>Why this works — and why it's <em>enough</em></h2>
+
+  <p>Many of us feel that a meaningful morning practice should be longer, more elaborate, more disciplined. We carry around an image of the person we'd be if only we had the time — an hour of silence, a full yoga sequence, a perfect ritual. This image, more often than not, stops us from doing anything at all.</p>
+
+  <p>Five minutes is not a compromise. It is a complete unit of practice. Research consistently shows that even brief, regular breathwork shifts the balance of the autonomic nervous system toward greater parasympathetic tone — meaning less reactivity, steadier mood, and better capacity to respond thoughtfully rather than react automatically.</p>
+
+  <p>The key word is <em>regular</em>. Five minutes every morning for thirty days will do far more for your nervous system than an hour once a week. Small, consistent acts of attention compound quietly. They become, eventually, the architecture of a calmer life.</p>
+
+  <div class="pull-quote">
+    <p>"You don't need more time. You need to use the time you already have, differently."</p>
+  </div>
+
+  <p>Try it tomorrow. Before the phone. Before the coffee. Before the news. Five minutes, lying exactly where you are. Notice what the morning feels like when it begins with breath rather than information. That feeling is available to you every single day — and it costs nothing but a little attention.</p>
+
+</article>
+
+<div class="author-bio reveal">
+  <div class="author-bio-inner">
+    <div class="author-avatar-lg">A</div>
+    <div class="author-bio-text">
+      <p class="author-bio-name">Anastasiya</p>
+      <p class="author-bio-role">Certified Yoga Teacher · Ayurveda & Meditation Guide</p>
+      <p>Anastasiya has been teaching yoga for over a decade, guiding students across all ages and backgrounds through online and in-person sessions. Her approach is rooted in classical tradition and shaped by genuine care for each individual she works with.</p>
+    </div>
+  </div>
+</div>
+
+<section class="related reveal">
+  <div class="related-inner">
+    <p class="related-label">Keep reading</p>
+    <h2 class="related-title">More from <em>the mat</em></h2>
+    <div class="related-grid">
+      <a href="post-hatha-beginners.html" class="related-card">
+        <span class="related-card-tag">Yoga</span>
+        <p class="related-card-title">Why beginners struggle with Hatha yoga — and how to change that</p>
+        <span class="related-card-arrow">Read more →</span>
+      </a>
+      <a href="post-meditation-thinking.html" class="related-card">
+        <span class="related-card-tag">Meditation</span>
+        <p class="related-card-title">How to meditate when you can't stop thinking</p>
+        <span class="related-card-arrow">Read more →</span>
+      </a>
+      <a href="post-evening-ritual.html" class="related-card">
+        <span class="related-card-tag">Lifestyle</span>
+        <p class="related-card-title">The evening ritual that helped me sleep through the night</p>
+        <span class="related-card-arrow">Read more →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="post-cta reveal">
+  <div class="post-cta-inner">
+    <p class="post-cta-label">Ready to go deeper?</p>
+    <h2 class="post-cta-title">Explore breathwork<br><em>in a live session</em></h2>
+    <p>Experience pranayama and guided meditation with Anastasiya — personalised to your pace and your nervous system.</p>
+    <a href="index.html#cta" class="btn-primary">Reserve Your First Session</a>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-logo">Yoga by Destiny</span>
+  <nav class="footer-links" aria-label="Footer links">
+    <a href="index.html#about">About</a>
+    <a href="index.html#styles">Styles</a>
+    <a href="index.html#benefits">Benefits</a>
+    <a href="blog.html" class="active">Blog</a>
+    <a href="index.html#cta">Book a Session</a>
+  </nav>
+  <div class="footer-social">
+    <a href="https://instagram.com/destiny.of.a.yogi" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg viewBox="0 0 24 24"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r=".6" fill="currentColor" stroke="none"/></svg>
+    </a>
+    <a href="https://facebook.com/YogaWithAnastasiya" target="_blank" rel="noopener" aria-label="Facebook">
+      <svg viewBox="0 0 24 24"><path d="M16 8h-2.5a2 2 0 0 0-2 2v2H9v3h2.5v7h3v-7H17l.5-3h-3v-1.5a.5.5 0 0 1 .5-.5H17z"/><circle cx="12" cy="12" r="10"/></svg>
+    </a>
+  </div>
+  <span class="footer-copy">© 2025 Yoga by Destiny. All rights reserved.</span>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);} });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => io.observe(el));
+</script>
+</body>
+</html>

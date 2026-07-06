@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What your digestion is telling you about your dosha · Yoga by Destiny</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --black:#080808; --surface:#121212; --card:#1a1a14; --gold:#C9A84C; --gold-light:#E8D5A3; --gold-dim:#8a6f2e; --text:#d4c8a8; --text-muted:#7a7060; --white:#f5f0e8; }
+    html { scroll-behavior: smooth; }
+    body { background:var(--black); color:var(--text); font-family:'Lato',sans-serif; font-weight:300; line-height:1.75; overflow-x:hidden; }
+    nav { position:fixed; top:0; left:0; right:0; z-index:1000; display:flex; justify-content:space-between; align-items:center; padding:1rem 4vw; background:rgba(8,8,8,.97); border-bottom:1px solid rgba(201,168,76,.12); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); }
+    .nav-logo { font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; letter-spacing:.14em; color:var(--gold); text-transform:uppercase; text-decoration:none; white-space:nowrap; flex-shrink:0; }
+    nav ul { list-style:none; display:flex; align-items:center; gap:0; flex-wrap:nowrap; margin:0; padding:0; }
+    nav ul li { display:block; }
+    nav ul li a { display:block; padding:.5rem .9rem; font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; color:var(--text-muted); text-decoration:none; white-space:nowrap; transition:color .3s; }
+    nav ul li a:hover,.nav ul li a.active { color:var(--gold); }
+    nav ul li a.active { color:var(--gold); }
+    .nav-toggle { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:.4rem; }
+    .nav-toggle span { display:block; width:22px; height:1px; background:var(--gold); }
+    @media(max-width:720px){ .nav-toggle{display:flex;} nav ul{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:rgba(8,8,8,.98);border-bottom:1px solid rgba(201,168,76,.15);padding:.75rem 0 1rem;} nav ul.open{display:flex;} nav ul li a{padding:.7rem 4vw;font-size:.8rem;} }
+    .breadcrumb { padding:6.5rem 5vw 0; max-width:780px; margin:0 auto; }
+    .breadcrumb a { font-size:.7rem; letter-spacing:.18em; text-transform:uppercase; color:var(--text-muted); text-decoration:none; display:inline-flex; align-items:center; gap:.45rem; transition:color .3s; }
+    .breadcrumb a::before { content:'←'; } .breadcrumb a:hover { color:var(--gold); }
+    .post-header { max-width:780px; margin:0 auto; padding:2.5rem 5vw 0; text-align:center; }
+    .post-tag { display:inline-block; font-size:.62rem; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); border:1px solid var(--gold-dim); padding:.25rem .75rem; margin-bottom:1.5rem; }
+    .post-title { font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,5vw,3.4rem); font-weight:300; color:var(--white); line-height:1.15; margin-bottom:1.5rem; }
+    .post-title em { font-style:italic; color:var(--gold-light); }
+    .post-meta { display:flex; align-items:center; justify-content:center; gap:.85rem; flex-wrap:wrap; font-size:.72rem; color:var(--text-muted); letter-spacing:.06em; margin-bottom:2.5rem; }
+    .post-meta-dot { width:3px; height:3px; border-radius:50%; background:var(--gold-dim); }
+    .gold-line { display:block; height:1px; background:linear-gradient(90deg,transparent,var(--gold),transparent); max-width:340px; margin:0 auto 3.5rem; }
+    .post-illustration { max-width:900px; margin:0 auto; padding:0 5vw 3.5rem; display:flex; justify-content:center; }
+    .post-illustration svg { width:min(300px,65vw); height:min(300px,65vw); opacity:.75; }
+    .post-body { max-width:700px; margin:0 auto; padding:0 5vw 5rem; }
+    .post-body p { font-size:1.05rem; line-height:1.9; color:var(--text); margin-bottom:1.6rem; }
+    .post-body h2 { font-family:'Cormorant Garamond',serif; font-size:clamp(1.5rem,3vw,2rem); font-weight:300; color:var(--white); line-height:1.2; margin:3rem 0 1rem; }
+    .post-body h2 em { font-style:italic; color:var(--gold-light); }
+    .post-body h3 { font-family:'Cormorant Garamond',serif; font-size:1.25rem; color:var(--gold-light); font-weight:400; margin:2rem 0 .75rem; }
+    .post-body strong { color:var(--white); font-weight:400; }
+    .post-body em { color:var(--gold-light); font-style:italic; }
+    .pull-quote { border-left:1px solid var(--gold); padding:1.25rem 1.75rem; margin:2.5rem 0; background:rgba(201,168,76,.04); }
+    .pull-quote p { font-family:'Cormorant Garamond',serif; font-size:1.35rem; font-style:italic; color:var(--gold-light); line-height:1.55; margin-bottom:0; }
+    .tip-box { border:1px solid rgba(201,168,76,.2); background:var(--card); padding:1.5rem 1.75rem; margin:2.5rem 0; }
+    .tip-box-label { font-size:.62rem; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); margin-bottom:.75rem; display:block; }
+    .tip-box ul { list-style:none; padding:0; margin-top:.5rem; }
+    .tip-box ul li { font-size:.95rem; color:var(--text); padding:.3rem 0 .3rem 1.2rem; position:relative; }
+    .tip-box ul li::before { content:'—'; position:absolute; left:0; color:var(--gold-dim); }
+    .section-divider { display:flex; align-items:center; gap:1rem; margin:3rem 0; }
+    .section-divider::before,.section-divider::after { content:''; flex:1; height:1px; background:linear-gradient(90deg,transparent,rgba(201,168,76,.3)); }
+    .section-divider::after { background:linear-gradient(270deg,transparent,rgba(201,168,76,.3)); }
+    .section-divider span { color:var(--gold); font-size:.9rem; flex-shrink:0; }
+    .author-bio { max-width:700px; margin:0 auto 3rem; padding:0 5vw; }
+    .author-bio-inner { display:flex; gap:1.5rem; align-items:flex-start; border:1px solid rgba(201,168,76,.15); background:var(--card); padding:1.75rem; }
+    .author-avatar-lg { width:56px; height:56px; border-radius:50%; border:1px solid var(--gold-dim); display:flex; align-items:center; justify-content:center; font-family:'Cormorant Garamond',serif; font-size:1.4rem; color:var(--gold); flex-shrink:0; }
+    .author-bio-text { flex:1; }
+    .author-bio-name { font-family:'Cormorant Garamond',serif; font-size:1.1rem; color:var(--white); margin-bottom:.25rem; }
+    .author-bio-role { font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; color:var(--gold-dim); margin-bottom:.6rem; }
+    .author-bio-text p { font-size:.88rem; color:var(--text-muted); margin-bottom:0; }
+    .related { background:var(--surface); border-top:1px solid rgba(201,168,76,.1); padding:4rem 5vw; }
+    .related-inner { max-width:1100px; margin:0 auto; }
+    .related-label { font-size:.68rem; letter-spacing:.3em; text-transform:uppercase; color:var(--gold-dim); margin-bottom:.75rem; text-align:center; }
+    .related-title { font-family:'Cormorant Garamond',serif; font-size:clamp(1.6rem,3vw,2.2rem); font-weight:300; color:var(--white); text-align:center; margin-bottom:2.5rem; }
+    .related-title em { font-style:italic; color:var(--gold-light); }
+    .related-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; }
+    .related-card { background:var(--card); border:1px solid rgba(201,168,76,.1); padding:1.6rem; text-decoration:none; display:block; transition:border-color .35s,transform .35s; position:relative; overflow:hidden; }
+    .related-card::before { content:''; position:absolute; top:0; left:0; right:0; height:1px; background:linear-gradient(90deg,transparent,var(--gold),transparent); transform:scaleX(0); transform-origin:center; transition:transform .45s; }
+    .related-card:hover { border-color:rgba(201,168,76,.3); transform:translateY(-3px); }
+    .related-card:hover::before { transform:scaleX(1); }
+    .related-card-tag { font-size:.6rem; letter-spacing:.18em; text-transform:uppercase; color:var(--gold-dim); margin-bottom:.6rem; display:block; }
+    .related-card-title { font-family:'Cormorant Garamond',serif; font-size:1.1rem; color:var(--white); line-height:1.3; font-weight:300; margin-bottom:.5rem; }
+    .related-card-arrow { font-size:.68rem; letter-spacing:.15em; text-transform:uppercase; color:var(--gold); display:block; margin-top:1rem; }
+    .post-cta { background:var(--black); text-align:center; padding:5rem 5vw; position:relative; overflow:hidden; }
+    .post-cta::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 50% 60% at 50% 50%,rgba(201,168,76,.06) 0%,transparent 70%); }
+    .post-cta-inner { position:relative; z-index:1; max-width:540px; margin:0 auto; }
+    .post-cta-label { font-size:.68rem; letter-spacing:.3em; text-transform:uppercase; color:var(--gold-dim); margin-bottom:1rem; }
+    .post-cta-title { font-family:'Cormorant Garamond',serif; font-size:clamp(1.8rem,3.5vw,2.6rem); font-weight:300; color:var(--white); line-height:1.15; margin-bottom:1rem; }
+    .post-cta-title em { font-style:italic; color:var(--gold-light); }
+    .post-cta p { color:var(--text-muted); margin-bottom:2rem; }
+    .btn-primary { display:inline-block; padding:.85rem 2.6rem; border:1px solid var(--gold); color:var(--gold); font-family:'Lato',sans-serif; font-size:.78rem; letter-spacing:.2em; text-transform:uppercase; text-decoration:none; background:transparent; transition:background .35s,color .35s,box-shadow .35s; }
+    .btn-primary:hover { background:var(--gold); color:var(--black); box-shadow:0 0 40px rgba(201,168,76,.25); }
+    footer { background:var(--surface); border-top:1px solid rgba(201,168,76,.12); padding:2.5rem 5vw; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1.5rem; }
+    .footer-logo { font-family:'Cormorant Garamond',serif; font-size:1rem; letter-spacing:.18em; color:var(--gold); text-transform:uppercase; }
+    .footer-links { display:flex; gap:2rem; flex-wrap:wrap; }
+    .footer-links a { font-size:.75rem; letter-spacing:.1em; color:var(--text-muted); text-decoration:none; transition:color .3s; }
+    .footer-links a:hover,.footer-links a.active { color:var(--gold); }
+    .footer-social { display:flex; gap:1.25rem; }
+    .footer-social a { display:flex; align-items:center; justify-content:center; width:34px; height:34px; border:1px solid rgba(201,168,76,.25); border-radius:50%; color:var(--text-muted); transition:color .3s,border-color .3s; }
+    .footer-social a:hover { color:var(--gold); border-color:var(--gold); }
+    .footer-social svg { width:15px; height:15px; stroke:currentColor; fill:none; stroke-width:1.6; }
+    .footer-copy { font-size:.72rem; color:var(--text-muted); width:100%; text-align:center; padding-top:.5rem; }
+    .reveal { opacity:0; transform:translateY(22px); transition:opacity .8s ease,transform .8s ease; }
+    .reveal.visible { opacity:1; transform:none; }
+    @media(max-width:800px){ .related-grid{grid-template-columns:1fr;} .author-bio-inner{flex-direction:column;} footer{justify-content:center;text-align:center;} .footer-links{justify-content:center;} }
+    @media(min-width:501px) and (max-width:800px){ .related-grid{grid-template-columns:1fr 1fr;} }
+    @media(prefers-reduced-motion:reduce){ .reveal{opacity:1;transform:none;transition:none;} }
+  </style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html">Yoga by Destiny</a>
+  <button class="nav-toggle" aria-label="Toggle menu" onclick="this.nextElementSibling.classList.toggle('open')"><span></span><span></span><span></span></button>
+  <ul id="nav-menu">
+    <li><a href="index.html#about" onclick="document.getElementById('nav-menu').classList.remove('open')">About</a></li>
+    <li><a href="index.html#styles" onclick="document.getElementById('nav-menu').classList.remove('open')">Styles</a></li>
+    <li><a href="index.html#benefits" onclick="document.getElementById('nav-menu').classList.remove('open')">Benefits</a></li>
+    <li><a href="index.html#testimonials" onclick="document.getElementById('nav-menu').classList.remove('open')">Stories</a></li>
+    <li><a href="blog.html" class="active" onclick="document.getElementById('nav-menu').classList.remove('open')">Blog</a></li>
+    <li><a href="index.html#cta" onclick="document.getElementById('nav-menu').classList.remove('open')">Begin</a></li>
+  </ul>
+</nav>
+
+<div class="breadcrumb"><a href="blog.html">Back to Blog</a></div>
+
+<header class="post-header reveal">
+  <span class="post-tag">Ayurveda</span>
+  <h1 class="post-title">What your digestion is telling you<br>about your <em>dosha</em></h1>
+  <div class="post-meta">
+    <span>Anastasiya</span><span class="post-meta-dot"></span>
+    <span>April 2025</span><span class="post-meta-dot"></span>
+    <span>7 min read</span><span class="post-meta-dot"></span>
+    <span>Ayurveda · Wellness</span>
+  </div>
+  <span class="gold-line"></span>
+</header>
+
+<div class="post-illustration reveal">
+  <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#C9A84C">
+    <path d="M100 20 C55 35 30 70 45 110 C60 150 100 170 100 170 C100 170 140 150 155 110 C170 70 145 35 100 20Z" stroke-width="1"/>
+    <path d="M100 40 C70 52 52 78 64 110 C76 140 100 155 100 155 C100 155 124 140 136 110 C148 78 130 52 100 40Z" stroke-width=".6" stroke="rgba(201,168,76,.6)"/>
+    <path d="M100 62 C82 72 74 92 82 112 C90 130 100 140 100 140 C100 140 110 130 118 112 C126 92 118 72 100 62Z" stroke-width=".5" stroke="rgba(201,168,76,.4)"/>
+    <circle cx="100" cy="100" r="8" stroke-width="1"/>
+    <circle cx="100" cy="100" r="3" fill="#C9A84C" stroke="none"/>
+    <line x1="100" y1="20" x2="100" y2="170" stroke-width=".3" stroke="rgba(201,168,76,.3)"/>
+  </svg>
+</div>
+
+<article class="post-body reveal">
+
+  <p>In Ayurveda — the ancient Indian science of life that forms the philosophical foundation of yoga — there is a saying: <em>you are not what you eat, but what you digest.</em> This single idea reframes everything about how we think about food, health, and the body's relationship to nourishment.</p>
+
+  <p>Digestion in the Ayurvedic framework is governed by <strong>Agni</strong> — the digestive fire. When Agni is balanced, food is transformed efficiently into energy, clarity, and vitality. When it is weakened, irregular, or excessive, undigested material accumulates in the body, laying the groundwork for fatigue, heaviness, and eventually, imbalance.</p>
+
+  <p>And the state of your Agni is intimately connected to your <em>dosha</em> — your unique constitutional type.</p>
+
+  <div class="pull-quote">
+    <p>"Digestion is not merely a physical process. In Ayurveda, how we process food mirrors how we process experience, emotion, and life itself."</p>
+  </div>
+
+  <h2>The three <em>doshas</em> — a brief introduction</h2>
+
+  <p>Ayurveda identifies three fundamental energies that govern all biological and psychological processes: <strong>Vata</strong> (air and space), <strong>Pitta</strong> (fire and water), and <strong>Kapha</strong> (earth and water). Most people are a combination of two, with one tending to dominate. Each dosha has a characteristic relationship with digestion — and recognising your patterns can offer surprisingly practical guidance.</p>
+
+  <h3>Vata digestion — variable, irregular, easily disrupted</h3>
+  <p>If your digestion is unpredictable — sometimes strong, sometimes almost absent; if you experience bloating, gas, or constipation, especially when you're stressed or traveling — Vata may be elevated. Vata digestion responds poorly to cold, raw, and dry foods, and to irregular eating times. It is calmed by warm, oily, well-cooked meals eaten at consistent hours.</p>
+
+  <div class="tip-box">
+    <span class="tip-box-label">Supporting Vata digestion</span>
+    <ul>
+      <li>Eat at the same times each day — regularity is medicine for Vata</li>
+      <li>Favour warm, cooked foods over raw salads and cold smoothies</li>
+      <li>Add healthy fats: ghee, sesame oil, avocado</li>
+      <li>Sip warm water or ginger tea throughout the day</li>
+      <li>Avoid eating while anxious, distracted, or on the move</li>
+    </ul>
+  </div>
+
+  <h3>Pitta digestion — strong, sharp, prone to excess</h3>
+  <p>If your appetite is intense and you become irritable or headachy when meals are delayed; if you experience acid reflux, loose stools, or a burning sensation — Pitta may be elevated. Pitta digestion is powerful but can tip into inflammation. It is pacified by cooling, moderately moist foods, and by avoiding excessive spice, alcohol, and eating under pressure.</p>
+
+  <div class="tip-box">
+    <span class="tip-box-label">Supporting Pitta digestion</span>
+    <ul>
+      <li>Don't skip meals — an empty Pitta stomach becomes acidic quickly</li>
+      <li>Favour cooling foods: cucumber, coconut, mint, sweet fruits</li>
+      <li>Reduce very spicy, fermented, and fried foods</li>
+      <li>Eat in a calm environment — Pitta is aggravated by stress and competition</li>
+      <li>Avoid eating when angry or frustrated</li>
+    </ul>
+  </div>
+
+  <h3>Kapha digestion — slow, steady, prone to heaviness</h3>
+  <p>If you feel heavy or sluggish after meals, if your appetite is low in the morning, if you gain weight easily or feel congested — Kapha may be elevated. Kapha digestion is slow but stable. It benefits from lighter, drier, spicier foods that stimulate the digestive fire, and from avoiding heavy dairy, excessive sweets, and large evening meals.</p>
+
+  <div class="tip-box">
+    <span class="tip-box-label">Supporting Kapha digestion</span>
+    <ul>
+      <li>Make lunch your largest meal, and keep dinner light</li>
+      <li>Use warming spices generously: ginger, black pepper, turmeric, cumin</li>
+      <li>Reduce dairy, wheat, and cold or heavy foods</li>
+      <li>A short walk after meals helps kindle sluggish Agni</li>
+      <li>Avoid sleeping after eating</li>
+    </ul>
+  </div>
+
+  <div class="section-divider"><span>✦</span></div>
+
+  <h2>A note on <em>how</em> you eat</h2>
+
+  <p>Ayurveda is equally concerned with the conditions of eating as with the content. Eating while distracted, eating too quickly, eating emotionally, eating incompatible food combinations — these all weaken Agni regardless of dosha. Some of the most supportive things you can do for your digestion have nothing to do with what's on the plate: sit down, slow down, chew thoroughly, and bring a moment of genuine gratitude before you begin.</p>
+
+  <p>These practices are not precious rituals. They are physiologically meaningful. The digestive system is heavily innervated by the vagus nerve, which is responsive to states of calm and presence. When you eat with awareness, digestion literally functions better.</p>
+
+  <p>Ayurveda does not offer a universal diet. It offers a framework for listening — to your body's signals, your seasonal rhythms, your constitutional patterns — and responding with intelligence and care. That listening, practised over time, becomes its own form of healing.</p>
+
+</article>
+
+<div class="author-bio reveal">
+  <div class="author-bio-inner">
+    <div class="author-avatar-lg">A</div>
+    <div class="author-bio-text">
+      <p class="author-bio-name">Anastasiya</p>
+      <p class="author-bio-role">Certified Yoga Teacher · Ayurveda & Meditation Guide</p>
+      <p>Anastasiya has been teaching yoga for over a decade, guiding students across all ages and backgrounds through online and in-person sessions. Her approach is rooted in classical tradition and shaped by genuine care for each individual she works with.</p>
+    </div>
+  </div>
+</div>
+
+<section class="related reveal">
+  <div class="related-inner">
+    <p class="related-label">Keep reading</p>
+    <h2 class="related-title">More from <em>the mat</em></h2>
+    <div class="related-grid">
+      <a href="post-ayurveda-winter.html" class="related-card">
+        <span class="related-card-tag">Ayurveda</span>
+        <p class="related-card-title">Eating with the seasons: an Ayurvedic guide to winter foods</p>
+        <span class="related-card-arrow">Read more →</span>
+      </a>
+      <a href="post-morning-routine.html" class="related-card">
+        <span class="related-card-tag">Meditation</span>
+        <p class="related-card-title">Five minutes that will change how you start your morning</p>
+        <span class="related-card-arrow">Read more →</span>
+      </a>
+      <a href="post-evening-ritual.html" class="related-card">
+        <span class="related-card-tag">Lifestyle</span>
+        <p class="related-card-title">The evening ritual that helped me sleep through the night</p>
+        <span class="related-card-arrow">Read more →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="post-cta reveal">
+  <div class="post-cta-inner">
+    <p class="post-cta-label">Go deeper</p>
+    <h2 class="post-cta-title">Explore Ayurveda<br><em>in your practice</em></h2>
+    <p>Anastasiya weaves Ayurvedic principles into her yoga sessions — helping you understand your body as a whole, living system.</p>
+    <a href="index.html#cta" class="btn-primary">Reserve Your First Session</a>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-logo">Yoga by Destiny</span>
+  <nav class="footer-links" aria-label="Footer links">
+    <a href="index.html#about">About</a><a href="index.html#styles">Styles</a>
+    <a href="index.html#benefits">Benefits</a><a href="blog.html" class="active">Blog</a>
+    <a href="index.html#cta">Book a Session</a>
+  </nav>
+  <div class="footer-social">
+    <a href="https://instagram.com/destiny.of.a.yogi" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg viewBox="0 0 24 24"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r=".6" fill="currentColor" stroke="none"/></svg>
+    </a>
+    <a href="https://facebook.com/YogaWithAnastasiya" target="_blank" rel="noopener" aria-label="Facebook">
+      <svg viewBox="0 0 24 24"><path d="M16 8h-2.5a2 2 0 0 0-2 2v2H9v3h2.5v7h3v-7H17l.5-3h-3v-1.5a.5.5 0 0 1 .5-.5H17z"/><circle cx="12" cy="12" r="10"/></svg>
+    </a>
+  </div>
+  <span class="footer-copy">© 2025 Yoga by Destiny. All rights reserved.</span>
+</footer>
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);} });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => io.observe(el));
+</script>
+</body>
+</html>
